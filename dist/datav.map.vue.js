@@ -1,10 +1,12 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('vue')) :
   typeof define === 'function' && define.amd ? define(['vue'], factory) :
-  (global = global || self, factory(global.Vue));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Vue));
 }(this, (function (Vue) { 'use strict';
 
-  Vue = Vue && Object.prototype.hasOwnProperty.call(Vue, 'default') ? Vue['default'] : Vue;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var Vue__default = /*#__PURE__*/_interopDefaultLegacy(Vue);
 
   function randomExtend(minNum, maxNum) {
     if (arguments.length === 1) {
@@ -332,7 +334,7 @@
   const __vue_script__ = script;
 
   /* template */
-  var __vue_render__ = function() {
+  var __vue_render__ = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -349,7 +351,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-2da16e2c_0", { source: "#dv-full-screen-container {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,QAAQ;EACR,SAAS;EACT,gBAAgB;EAChB,0BAA0B;EAC1B,YAAY;AACd","file":"main.vue","sourcesContent":["#dv-full-screen-container {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}\n"]}, media: undefined });
+      inject("data-v-7a1c6c33_0", { source: "#dv-full-screen-container {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,QAAQ;EACR,SAAS;EACT,gBAAgB;EAChB,0BAA0B;EAC1B,YAAY;AACd","file":"main.vue","sourcesContent":["#dv-full-screen-container {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -448,7 +450,7 @@
   const __vue_script__$1 = script$1;
 
   /* template */
-  var __vue_render__$1 = function() {
+  var __vue_render__$1 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -465,8 +467,8 @@
               "stroke-width": "3",
               "stroke-dasharray": "31.415, 31.415",
               stroke: "#02bcfe",
-              "stroke-linecap": "round"
-            }
+              "stroke-linecap": "round",
+            },
           },
           [
             _c("animateTransform", {
@@ -475,8 +477,8 @@
                 type: "rotate",
                 values: "0, 25 25;360, 25 25",
                 dur: "1.5s",
-                repeatCount: "indefinite"
-              }
+                repeatCount: "indefinite",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -484,9 +486,9 @@
                 attributeName: "stroke",
                 values: "#02bcfe;#3be6cb;#02bcfe",
                 dur: "3s",
-                repeatCount: "indefinite"
-              }
-            })
+                repeatCount: "indefinite",
+              },
+            }),
           ],
           1
         ),
@@ -502,8 +504,8 @@
               "stroke-width": "3",
               "stroke-dasharray": "15.7, 15.7",
               stroke: "#3be6cb",
-              "stroke-linecap": "round"
-            }
+              "stroke-linecap": "round",
+            },
           },
           [
             _c("animateTransform", {
@@ -512,8 +514,8 @@
                 type: "rotate",
                 values: "360, 25 25;0, 25 25",
                 dur: "1.5s",
-                repeatCount: "indefinite"
-              }
+                repeatCount: "indefinite",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -521,15 +523,15 @@
                 attributeName: "stroke",
                 values: "#3be6cb;#02bcfe;#3be6cb",
                 dur: "3s",
-                repeatCount: "indefinite"
-              }
-            })
+                repeatCount: "indefinite",
+              },
+            }),
           ],
           1
-        )
+        ),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "loading-tip" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "loading-tip" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$1 = [];
@@ -538,7 +540,7 @@
     /* style */
     const __vue_inject_styles__$1 = function (inject) {
       if (!inject) return
-      inject("data-v-c8b3d976_0", { source: ".dv-loading {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-loading .loading-tip {\n  font-size: 15px;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;AACrB;AACA;EACE,eAAe;AACjB","file":"main.vue","sourcesContent":[".dv-loading {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-loading .loading-tip {\n  font-size: 15px;\n}\n"]}, media: undefined });
+      inject("data-v-4e599a49_0", { source: ".dv-loading {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-loading .loading-tip {\n  font-size: 15px;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;AACrB;AACA;EACE,eAAe;AACjB","file":"main.vue","sourcesContent":[".dv-loading {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-loading .loading-tip {\n  font-size: 15px;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -586,10 +588,12 @@
   }
 
   module.exports = _interopRequireDefault;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
   });
 
   unwrapExports(interopRequireDefault);
 
+  var arrayLikeToArray = createCommonjsModule(function (module) {
   function _arrayLikeToArray(arr, len) {
     if (len == null || len > arr.length) len = arr.length;
 
@@ -600,20 +604,35 @@
     return arr2;
   }
 
-  var arrayLikeToArray = _arrayLikeToArray;
+  module.exports = _arrayLikeToArray;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(arrayLikeToArray);
+
+  var arrayWithoutHoles = createCommonjsModule(function (module) {
   function _arrayWithoutHoles(arr) {
     if (Array.isArray(arr)) return arrayLikeToArray(arr);
   }
 
-  var arrayWithoutHoles = _arrayWithoutHoles;
+  module.exports = _arrayWithoutHoles;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(arrayWithoutHoles);
+
+  var iterableToArray = createCommonjsModule(function (module) {
   function _iterableToArray(iter) {
-    if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
   }
 
-  var iterableToArray = _iterableToArray;
+  module.exports = _iterableToArray;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(iterableToArray);
+
+  var unsupportedIterableToArray = createCommonjsModule(function (module) {
   function _unsupportedIterableToArray(o, minLen) {
     if (!o) return;
     if (typeof o === "string") return arrayLikeToArray(o, minLen);
@@ -623,19 +642,33 @@
     if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
   }
 
-  var unsupportedIterableToArray = _unsupportedIterableToArray;
+  module.exports = _unsupportedIterableToArray;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(unsupportedIterableToArray);
+
+  var nonIterableSpread = createCommonjsModule(function (module) {
   function _nonIterableSpread() {
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
 
-  var nonIterableSpread = _nonIterableSpread;
+  module.exports = _nonIterableSpread;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(nonIterableSpread);
+
+  var toConsumableArray = createCommonjsModule(function (module) {
   function _toConsumableArray(arr) {
     return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
   }
 
-  var toConsumableArray = _toConsumableArray;
+  module.exports = _toConsumableArray;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
+
+  unwrapExports(toConsumableArray);
 
   var _typeof_1 = createCommonjsModule(function (module) {
   function _typeof(obj) {
@@ -645,33 +678,49 @@
       module.exports = _typeof = function _typeof(obj) {
         return typeof obj;
       };
+
+      module.exports["default"] = module.exports, module.exports.__esModule = true;
     } else {
       module.exports = _typeof = function _typeof(obj) {
         return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
       };
+
+      module.exports["default"] = module.exports, module.exports.__esModule = true;
     }
 
     return _typeof(obj);
   }
 
   module.exports = _typeof;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
   });
 
+  unwrapExports(_typeof_1);
+
+  var arrayWithHoles = createCommonjsModule(function (module) {
   function _arrayWithHoles(arr) {
     if (Array.isArray(arr)) return arr;
   }
 
-  var arrayWithHoles = _arrayWithHoles;
+  module.exports = _arrayWithHoles;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(arrayWithHoles);
+
+  var iterableToArrayLimit = createCommonjsModule(function (module) {
   function _iterableToArrayLimit(arr, i) {
-    if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+    var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+    if (_i == null) return;
     var _arr = [];
     var _n = true;
     var _d = false;
-    var _e = undefined;
+
+    var _s, _e;
 
     try {
-      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
         _arr.push(_s.value);
 
         if (i && _arr.length === i) break;
@@ -690,19 +739,33 @@
     return _arr;
   }
 
-  var iterableToArrayLimit = _iterableToArrayLimit;
+  module.exports = _iterableToArrayLimit;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(iterableToArrayLimit);
+
+  var nonIterableRest = createCommonjsModule(function (module) {
   function _nonIterableRest() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
 
-  var nonIterableRest = _nonIterableRest;
+  module.exports = _nonIterableRest;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(nonIterableRest);
+
+  var slicedToArray = createCommonjsModule(function (module) {
   function _slicedToArray(arr, i) {
     return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
   }
 
-  var slicedToArray = _slicedToArray;
+  module.exports = _slicedToArray;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
+
+  unwrapExports(slicedToArray);
 
   var util = createCommonjsModule(function (module, exports) {
 
@@ -1377,7 +1440,7 @@
   const __vue_script__$2 = script$2;
 
   /* template */
-  var __vue_render__$2 = function() {
+  var __vue_render__$2 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -1389,7 +1452,7 @@
           "svg",
           {
             staticClass: "border",
-            attrs: { width: _vm.width, height: _vm.height }
+            attrs: { width: _vm.width, height: _vm.height },
           },
           [
             _c("polygon", {
@@ -1476,19 +1539,19 @@
                   (_vm.width - 81) +
                   ", 10 " +
                   (_vm.width - 85) +
-                  ", 6 85, 6 81, 10 75, 10 73, 8 41, 8 38, 11 24, 11 13, 21 13, 24"
-              }
-            })
+                  ", 6 85, 6 81, 10 75, 10 73, 8 41, 8 38, 11 24, 11 13, 21 13, 24",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
-        _vm._l(_vm.border, function(item) {
+        _vm._l(_vm.border, function (item) {
           return _c(
             "svg",
             {
               key: item,
               class: item + " border",
-              attrs: { width: "150px", height: "150px" }
+              attrs: { width: "150px", height: "150px" },
             },
             [
               _c(
@@ -1497,8 +1560,8 @@
                   attrs: {
                     fill: _vm.mergedColor[0],
                     points:
-                      "6,66 6,18 12,12 18,12 24,6 27,6 30,9 36,9 39,6 84,6 81,9 75,9 73.2,7 40.8,7 37.8,10.2 24,10.2 12,21 12,24 9,27 9,51 7.8,54 7.8,63"
-                  }
+                      "6,66 6,18 12,12 18,12 24,6 27,6 30,9 36,9 39,6 84,6 81,9 75,9 73.2,7 40.8,7 37.8,10.2 24,10.2 12,21 12,24 9,27 9,51 7.8,54 7.8,63",
+                  },
                 },
                 [
                   _c("animate", {
@@ -1512,9 +1575,9 @@
                         _vm.mergedColor[0],
                       dur: "0.5s",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ]
               ),
               _vm._v(" "),
@@ -1524,8 +1587,8 @@
                   attrs: {
                     fill: _vm.mergedColor[1],
                     points:
-                      "27.599999999999998,4.8 38.4,4.8 35.4,7.8 30.599999999999998,7.8"
-                  }
+                      "27.599999999999998,4.8 38.4,4.8 35.4,7.8 30.599999999999998,7.8",
+                  },
                 },
                 [
                   _c("animate", {
@@ -1539,9 +1602,9 @@
                         _vm.mergedColor[1],
                       dur: "0.5s",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ]
               ),
               _vm._v(" "),
@@ -1551,8 +1614,8 @@
                   attrs: {
                     fill: _vm.mergedColor[0],
                     points:
-                      "9,54 9,63 7.199999999999999,66 7.199999999999999,75 7.8,78 7.8,110 8.4,110 8.4,66 9.6,66 9.6,54"
-                  }
+                      "9,54 9,63 7.199999999999999,66 7.199999999999999,75 7.8,78 7.8,110 8.4,110 8.4,66 9.6,66 9.6,54",
+                  },
                 },
                 [
                   _c("animate", {
@@ -1565,16 +1628,16 @@
                         ";transparent",
                       dur: "1s",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ]
-              )
+              ),
             ]
           )
         }),
         _vm._v(" "),
-        _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+        _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
       ],
       2
     )
@@ -1585,7 +1648,7 @@
     /* style */
     const __vue_inject_styles__$2 = function (inject) {
       if (!inject) return
-      inject("data-v-5d85361d_0", { source: ".dv-border-box-1 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-1 .border {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-1 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-1 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-1 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-1 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,cAAc;AAChB;AACA;EACE,UAAU;EACV,0BAA0B;AAC5B;AACA;EACE,WAAW;EACX,0BAA0B;AAC5B;AACA;EACE,UAAU;EACV,WAAW;EACX,0CAA0C;AAC5C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-1 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-1 .border {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-1 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-1 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-1 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-1 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-a9ca681a_0", { source: ".dv-border-box-1 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-1 .border {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-1 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-1 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-1 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-1 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,cAAc;AAChB;AACA;EACE,UAAU;EACV,0BAA0B;AAC5B;AACA;EACE,WAAW;EACX,0BAA0B;AAC5B;AACA;EACE,UAAU;EACV,WAAW;EACX,0CAA0C;AAC5C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-1 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-1 .border {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-1 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-1 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-1 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-1 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -1673,7 +1736,7 @@
   const __vue_script__$3 = script$3;
 
   /* template */
-  var __vue_render__$3 = function() {
+  var __vue_render__$3 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -1682,7 +1745,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("polygon", {
@@ -1697,8 +1760,8 @@
                 (_vm.height - 7) +
                 " 7, " +
                 (_vm.height - 7) +
-                "\n    "
-            }
+                "\n    ",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -1713,8 +1776,8 @@
                 (_vm.height - 2) +
                 " 2, " +
                 (_vm.height - 2) +
-                " 2, 2"
-            }
+                " 2, 2",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -1729,12 +1792,12 @@
                 (_vm.height - 6) +
                 " 6, " +
                 (_vm.height - 6) +
-                " 6, 6"
-            }
+                " 6, 6",
+            },
           }),
           _vm._v(" "),
           _c("circle", {
-            attrs: { fill: _vm.mergedColor[0], cx: "11", cy: "11", r: "1" }
+            attrs: { fill: _vm.mergedColor[0], cx: "11", cy: "11", r: "1" },
           }),
           _vm._v(" "),
           _c("circle", {
@@ -1742,8 +1805,8 @@
               fill: _vm.mergedColor[0],
               cx: _vm.width - 11,
               cy: "11",
-              r: "1"
-            }
+              r: "1",
+            },
           }),
           _vm._v(" "),
           _c("circle", {
@@ -1751,8 +1814,8 @@
               fill: _vm.mergedColor[0],
               cx: _vm.width - 11,
               cy: _vm.height - 11,
-              r: "1"
-            }
+              r: "1",
+            },
           }),
           _vm._v(" "),
           _c("circle", {
@@ -1760,13 +1823,13 @@
               fill: _vm.mergedColor[0],
               cx: "11",
               cy: _vm.height - 11,
-              r: "1"
-            }
-          })
+              r: "1",
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$3 = [];
@@ -1775,7 +1838,7 @@
     /* style */
     const __vue_inject_styles__$3 = function (inject) {
       if (!inject) return
-      inject("data-v-d5c64680_0", { source: ".dv-border-box-2 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-2 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-2 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-2 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;EACV,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-2 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-2 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-2 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-2 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-05775ec3_0", { source: ".dv-border-box-2 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-2 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-2 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-2 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;EACV,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-2 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-2 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-2 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-2 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -1863,7 +1926,7 @@
   const __vue_script__$4 = script$4;
 
   /* template */
-  var __vue_render__$4 = function() {
+  var __vue_render__$4 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -1872,7 +1935,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("polygon", {
@@ -1887,8 +1950,8 @@
                 (_vm.height - 24) +
                 " 23, " +
                 (_vm.height - 24) +
-                "\n    "
-            }
+                "\n    ",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -1904,8 +1967,8 @@
                 (_vm.height - 22) +
                 " 4, " +
                 (_vm.height - 22) +
-                " 4, 4"
-            }
+                " 4, 4",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -1921,8 +1984,8 @@
                 (_vm.height - 16) +
                 " 10, " +
                 (_vm.height - 16) +
-                " 10, 10"
-            }
+                " 10, 10",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -1938,8 +2001,8 @@
                 (_vm.height - 10) +
                 " 16, " +
                 (_vm.height - 10) +
-                " 16, 16"
-            }
+                " 16, 16",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -1955,13 +2018,13 @@
                 (_vm.height - 4) +
                 " 22, " +
                 (_vm.height - 4) +
-                " 22, 22"
-            }
-          })
+                " 22, 22",
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$4 = [];
@@ -1970,7 +2033,7 @@
     /* style */
     const __vue_inject_styles__$4 = function (inject) {
       if (!inject) return
-      inject("data-v-8dbfb74c_0", { source: ".dv-border-box-3 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-3 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-3 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-3 .dv-bb3-line1 {\n  stroke-width: 3;\n}\n.dv-border-box-3 .dv-bb3-line2 {\n  stroke-width: 1;\n}\n.dv-border-box-3 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;AACZ;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-3 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-3 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-3 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-3 .dv-bb3-line1 {\n  stroke-width: 3;\n}\n.dv-border-box-3 .dv-bb3-line2 {\n  stroke-width: 1;\n}\n.dv-border-box-3 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-2f11c340_0", { source: ".dv-border-box-3 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-3 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-3 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-3 .dv-bb3-line1 {\n  stroke-width: 3;\n}\n.dv-border-box-3 .dv-bb3-line2 {\n  stroke-width: 1;\n}\n.dv-border-box-3 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;AACZ;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-3 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-3 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-3 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-3 .dv-bb3-line1 {\n  stroke-width: 3;\n}\n.dv-border-box-3 .dv-bb3-line2 {\n  stroke-width: 1;\n}\n.dv-border-box-3 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -2062,7 +2125,7 @@
   const __vue_script__$5 = script$5;
 
   /* template */
-  var __vue_render__$5 = function() {
+  var __vue_render__$5 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -2071,7 +2134,7 @@
         "svg",
         {
           class: "dv-border-svg-container " + (_vm.reverse && "dv-reverse"),
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("polygon", {
@@ -2088,8 +2151,8 @@
                 (_vm.width - 15) +
                 ", " +
                 (_vm.height - 7) +
-                "\n    "
-            }
+                "\n    ",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2105,8 +2168,8 @@
                 (_vm.height - 35) +
                 "\n        10, 40 40, 5 150, 5 170, 20 " +
                 (_vm.width - 15) +
-                ", 20"
-            }
+                ", 20",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2121,65 +2184,65 @@
                 " 14, " +
                 (_vm.height - 23) +
                 "\n        14, " +
-                (_vm.height - 100)
-            }
+                (_vm.height - 100),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-3",
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: "7, " + (_vm.height - 40) + " 7, " + (_vm.height - 75)
-            }
+              points: "7, " + (_vm.height - 40) + " 7, " + (_vm.height - 75),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-4",
-            attrs: { stroke: _vm.mergedColor[0], points: "28, 24 13, 41 13, 64" }
+            attrs: { stroke: _vm.mergedColor[0], points: "28, 24 13, 41 13, 64" },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-5",
-            attrs: { stroke: _vm.mergedColor[0], points: "5, 45 5, 140" }
+            attrs: { stroke: _vm.mergedColor[0], points: "5, 45 5, 140" },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-6",
-            attrs: { stroke: _vm.mergedColor[1], points: "14, 75 14, 180" }
+            attrs: { stroke: _vm.mergedColor[1], points: "14, 75 14, 180" },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-7",
             attrs: {
               stroke: _vm.mergedColor[1],
-              points: "55, 11 147, 11 167, 26 250, 26"
-            }
+              points: "55, 11 147, 11 167, 26 250, 26",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-8",
-            attrs: { stroke: _vm.mergedColor[1], points: "158, 5 173, 16" }
+            attrs: { stroke: _vm.mergedColor[1], points: "158, 5 173, 16" },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-9",
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: "200, 17 " + (_vm.width - 10) + ", 17"
-            }
+              points: "200, 17 " + (_vm.width - 10) + ", 17",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb4-line-10",
             attrs: {
               stroke: _vm.mergedColor[1],
-              points: "385, 17 " + (_vm.width - 10) + ", 17"
-            }
-          })
+              points: "385, 17 " + (_vm.width - 10) + ", 17",
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$5 = [];
@@ -2188,7 +2251,7 @@
     /* style */
     const __vue_inject_styles__$5 = function (inject) {
       if (!inject) return
-      inject("data-v-229480d1_0", { source: ".dv-border-box-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-4 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-4 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-4 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-4 .sw1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .sw3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-4 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-5 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-6 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-7 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-8 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-9 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n  stroke-dasharray: 100 250;\n}\n.dv-border-box-4 .dv-bb4-line-10 {\n  stroke-width: 1;\n  stroke-dasharray: 80 270;\n}\n.dv-border-box-4 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;AACZ;AACA;EACE,eAAe;AACjB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,iBAAiB;EACjB,qBAAqB;EACrB,yBAAyB;AAC3B;AACA;EACE,eAAe;EACf,wBAAwB;AAC1B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-4 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-4 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-4 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-4 .sw1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .sw3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-4 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-5 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-6 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-7 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-8 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-9 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n  stroke-dasharray: 100 250;\n}\n.dv-border-box-4 .dv-bb4-line-10 {\n  stroke-width: 1;\n  stroke-dasharray: 80 270;\n}\n.dv-border-box-4 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-6dc19974_0", { source: ".dv-border-box-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-4 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-4 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-4 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-4 .sw1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .sw3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-4 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-5 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-6 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-7 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-8 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-9 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n  stroke-dasharray: 100 250;\n}\n.dv-border-box-4 .dv-bb4-line-10 {\n  stroke-width: 1;\n  stroke-dasharray: 80 270;\n}\n.dv-border-box-4 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;AACZ;AACA;EACE,eAAe;AACjB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,iBAAiB;EACjB,qBAAqB;AACvB;AACA;EACE,iBAAiB;EACjB,qBAAqB;EACrB,yBAAyB;AAC3B;AACA;EACE,eAAe;EACf,wBAAwB;AAC1B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-4 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-4 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-4 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-4 .sw1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .sw3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-1 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-3 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-4 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-5 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-6 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-7 {\n  stroke-width: 1;\n}\n.dv-border-box-4 .dv-bb4-line-8 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n}\n.dv-border-box-4 .dv-bb4-line-9 {\n  stroke-width: 3px;\n  stroke-linecap: round;\n  stroke-dasharray: 100 250;\n}\n.dv-border-box-4 .dv-bb4-line-10 {\n  stroke-width: 1;\n  stroke-dasharray: 80 270;\n}\n.dv-border-box-4 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -2280,7 +2343,7 @@
   const __vue_script__$6 = script$6;
 
   /* template */
-  var __vue_render__$6 = function() {
+  var __vue_render__$6 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -2289,7 +2352,7 @@
         "svg",
         {
           class: "dv-border-svg-container  " + (_vm.reverse && "dv-reverse"),
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("polygon", {
@@ -2308,8 +2371,8 @@
                 (_vm.height - 24) +
                 " 10, " +
                 (_vm.height - 24) +
-                "\n    "
-            }
+                "\n    ",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2329,8 +2392,8 @@
                 (_vm.height - 5) +
                 " 8, " +
                 (_vm.height - 5) +
-                " 8, 5"
-            }
+                " 8, 5",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2350,24 +2413,24 @@
                 (_vm.height - 5) +
                 " 3, " +
                 (_vm.height - 5) +
-                " 3, 5"
-            }
+                " 3, 5",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb5-line-3",
             attrs: {
               stroke: _vm.mergedColor[1],
-              points: "50, 13 " + (_vm.width - 35) + ", 13"
-            }
+              points: "50, 13 " + (_vm.width - 35) + ", 13",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             staticClass: "dv-bb5-line-4",
             attrs: {
               stroke: _vm.mergedColor[1],
-              points: "15, 20 " + (_vm.width - 35) + ", 20"
-            }
+              points: "15, 20 " + (_vm.width - 35) + ", 20",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2380,8 +2443,8 @@
                 " " +
                 (_vm.width - 110) +
                 ", " +
-                (_vm.height - 20)
-            }
+                (_vm.height - 20),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2394,13 +2457,13 @@
                 " " +
                 (_vm.width - 110) +
                 ", " +
-                (_vm.height - 13)
-            }
-          })
+                (_vm.height - 13),
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$6 = [];
@@ -2409,7 +2472,7 @@
     /* style */
     const __vue_inject_styles__$6 = function (inject) {
       if (!inject) return
-      inject("data-v-5e711d00_0", { source: ".dv-border-box-5 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-5 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-5 .dv-bb5-line-1,\n.dv-border-box-5 .dv-bb5-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-5 .dv-bb5-line-3,\n.dv-border-box-5 .dv-bb5-line-6 {\n  stroke-width: 5;\n}\n.dv-border-box-5 .dv-bb5-line-4,\n.dv-border-box-5 .dv-bb5-line-5 {\n  stroke-width: 2;\n}\n.dv-border-box-5 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;AACd;AACA;EACE,UAAU;AACZ;AACA;;EAEE,eAAe;AACjB;AACA;;EAEE,eAAe;AACjB;AACA;;EAEE,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-5 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-5 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-5 .dv-bb5-line-1,\n.dv-border-box-5 .dv-bb5-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-5 .dv-bb5-line-3,\n.dv-border-box-5 .dv-bb5-line-6 {\n  stroke-width: 5;\n}\n.dv-border-box-5 .dv-bb5-line-4,\n.dv-border-box-5 .dv-bb5-line-5 {\n  stroke-width: 2;\n}\n.dv-border-box-5 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-93b2728c_0", { source: ".dv-border-box-5 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-5 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-5 .dv-bb5-line-1,\n.dv-border-box-5 .dv-bb5-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-5 .dv-bb5-line-3,\n.dv-border-box-5 .dv-bb5-line-6 {\n  stroke-width: 5;\n}\n.dv-border-box-5 .dv-bb5-line-4,\n.dv-border-box-5 .dv-bb5-line-5 {\n  stroke-width: 2;\n}\n.dv-border-box-5 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;AACd;AACA;EACE,UAAU;AACZ;AACA;;EAEE,eAAe;AACjB;AACA;;EAEE,eAAe;AACjB;AACA;;EAEE,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-5 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-reverse {\n  transform: rotate(180deg);\n}\n.dv-border-box-5 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-5 .dv-border-svg-container > polyline {\n  fill: none;\n}\n.dv-border-box-5 .dv-bb5-line-1,\n.dv-border-box-5 .dv-bb5-line-2 {\n  stroke-width: 1;\n}\n.dv-border-box-5 .dv-bb5-line-3,\n.dv-border-box-5 .dv-bb5-line-6 {\n  stroke-width: 5;\n}\n.dv-border-box-5 .dv-bb5-line-4,\n.dv-border-box-5 .dv-bb5-line-5 {\n  stroke-width: 2;\n}\n.dv-border-box-5 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -2497,7 +2560,7 @@
   const __vue_script__$7 = script$7;
 
   /* template */
-  var __vue_render__$7 = function() {
+  var __vue_render__$7 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -2506,7 +2569,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("polygon", {
@@ -2521,12 +2584,12 @@
                 (_vm.height - 7) +
                 " 9, " +
                 (_vm.height - 7) +
-                "\n    "
-            }
+                "\n    ",
+            },
           }),
           _vm._v(" "),
           _c("circle", {
-            attrs: { fill: _vm.mergedColor[1], cx: "5", cy: "5", r: "2" }
+            attrs: { fill: _vm.mergedColor[1], cx: "5", cy: "5", r: "2" },
           }),
           _vm._v(" "),
           _c("circle", {
@@ -2534,8 +2597,8 @@
               fill: _vm.mergedColor[1],
               cx: _vm.width - 5,
               cy: "5",
-              r: "2"
-            }
+              r: "2",
+            },
           }),
           _vm._v(" "),
           _c("circle", {
@@ -2543,8 +2606,8 @@
               fill: _vm.mergedColor[1],
               cx: _vm.width - 5,
               cy: _vm.height - 5,
-              r: "2"
-            }
+              r: "2",
+            },
           }),
           _vm._v(" "),
           _c("circle", {
@@ -2552,15 +2615,15 @@
               fill: _vm.mergedColor[1],
               cx: "5",
               cy: _vm.height - 5,
-              r: "2"
-            }
+              r: "2",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: "10, 4 " + (_vm.width - 10) + ", 4"
-            }
+              points: "10, 4 " + (_vm.width - 10) + ", 4",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2572,15 +2635,15 @@
                 " " +
                 (_vm.width - 10) +
                 ", " +
-                (_vm.height - 4)
-            }
+                (_vm.height - 4),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: "5, 70 5, " + (_vm.height - 70)
-            }
+              points: "5, 70 5, " + (_vm.height - 70),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2592,44 +2655,44 @@
                 ", 70 " +
                 (_vm.width - 5) +
                 ", " +
-                (_vm.height - 70)
-            }
+                (_vm.height - 70),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
-            attrs: { stroke: _vm.mergedColor[0], points: "3, 10, 3, 50" }
+            attrs: { stroke: _vm.mergedColor[0], points: "3, 10, 3, 50" },
           }),
           _vm._v(" "),
           _c("polyline", {
-            attrs: { stroke: _vm.mergedColor[0], points: "7, 30 7, 80" }
-          }),
-          _vm._v(" "),
-          _c("polyline", {
-            attrs: {
-              stroke: _vm.mergedColor[0],
-              points: _vm.width - 3 + ", 10 " + (_vm.width - 3) + ", 50"
-            }
+            attrs: { stroke: _vm.mergedColor[0], points: "7, 30 7, 80" },
           }),
           _vm._v(" "),
           _c("polyline", {
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: _vm.width - 7 + ", 30 " + (_vm.width - 7) + ", 80"
-            }
+              points: _vm.width - 3 + ", 10 " + (_vm.width - 3) + ", 50",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: "3, " + (_vm.height - 10) + " 3, " + (_vm.height - 50)
-            }
+              points: _vm.width - 7 + ", 30 " + (_vm.width - 7) + ", 80",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
             attrs: {
               stroke: _vm.mergedColor[0],
-              points: "7, " + (_vm.height - 30) + " 7, " + (_vm.height - 80)
-            }
+              points: "3, " + (_vm.height - 10) + " 3, " + (_vm.height - 50),
+            },
+          }),
+          _vm._v(" "),
+          _c("polyline", {
+            attrs: {
+              stroke: _vm.mergedColor[0],
+              points: "7, " + (_vm.height - 30) + " 7, " + (_vm.height - 80),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2643,8 +2706,8 @@
                 " " +
                 (_vm.width - 3) +
                 ", " +
-                (_vm.height - 50)
-            }
+                (_vm.height - 50),
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -2658,13 +2721,13 @@
                 " " +
                 (_vm.width - 7) +
                 ", " +
-                (_vm.height - 80)
-            }
-          })
+                (_vm.height - 80),
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$7 = [];
@@ -2673,7 +2736,7 @@
     /* style */
     const __vue_inject_styles__$7 = function (inject) {
       if (!inject) return
-      inject("data-v-715598fc_0", { source: ".dv-border-box-6 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-6 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;AACd;AACA;EACE,UAAU;EACV,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-6 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-6 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-497f8106_0", { source: ".dv-border-box-6 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-6 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;AACd;AACA;EACE,UAAU;EACV,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-6 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-6 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-6 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -2761,7 +2824,7 @@
   const __vue_script__$8 = script$8;
 
   /* template */
-  var __vue_render__$8 = function() {
+  var __vue_render__$8 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -2776,19 +2839,19 @@
           "; border: 1px solid " +
           _vm.mergedColor[0] +
           "; background-color: " +
-          _vm.backgroundColor
+          _vm.backgroundColor,
       },
       [
         _c(
           "svg",
           {
             staticClass: "dv-border-svg-container",
-            attrs: { width: _vm.width, height: _vm.height }
+            attrs: { width: _vm.width, height: _vm.height },
           },
           [
             _c("polyline", {
               staticClass: "dv-bb7-line-width-2",
-              attrs: { stroke: _vm.mergedColor[0], points: "0, 25 0, 0 25, 0" }
+              attrs: { stroke: _vm.mergedColor[0], points: "0, 25 0, 0 25, 0" },
             }),
             _vm._v(" "),
             _c("polyline", {
@@ -2802,8 +2865,8 @@
                   _vm.width +
                   ", 0 " +
                   _vm.width +
-                  ", 25"
-              }
+                  ", 25",
+              },
             }),
             _vm._v(" "),
             _c("polyline", {
@@ -2822,8 +2885,8 @@
                   " " +
                   _vm.width +
                   ", " +
-                  (_vm.height - 25)
-              }
+                  (_vm.height - 25),
+              },
             }),
             _vm._v(" "),
             _c("polyline", {
@@ -2836,13 +2899,13 @@
                   " 0, " +
                   _vm.height +
                   " 25, " +
-                  _vm.height
-              }
+                  _vm.height,
+              },
             }),
             _vm._v(" "),
             _c("polyline", {
               staticClass: "dv-bb7-line-width-5",
-              attrs: { stroke: _vm.mergedColor[1], points: "0, 10 0, 0 10, 0" }
+              attrs: { stroke: _vm.mergedColor[1], points: "0, 10 0, 0 10, 0" },
             }),
             _vm._v(" "),
             _c("polyline", {
@@ -2856,8 +2919,8 @@
                   _vm.width +
                   ", 0 " +
                   _vm.width +
-                  ", 10"
-              }
+                  ", 10",
+              },
             }),
             _vm._v(" "),
             _c("polyline", {
@@ -2876,8 +2939,8 @@
                   " " +
                   _vm.width +
                   ", " +
-                  (_vm.height - 10)
-              }
+                  (_vm.height - 10),
+              },
             }),
             _vm._v(" "),
             _c("polyline", {
@@ -2890,13 +2953,13 @@
                   " 0, " +
                   _vm.height +
                   " 10, " +
-                  _vm.height
-              }
-            })
+                  _vm.height,
+              },
+            }),
           ]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+        _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
       ]
     )
   };
@@ -2906,7 +2969,7 @@
     /* style */
     const __vue_inject_styles__$8 = function (inject) {
       if (!inject) return
-      inject("data-v-21156cd2_0", { source: ".dv-border-box-7 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-linecap: round;\n}\n.dv-border-box-7 .dv-bb7-line-width-2 {\n  stroke-width: 2;\n}\n.dv-border-box-7 .dv-bb7-line-width-5 {\n  stroke-width: 5;\n}\n.dv-border-box-7 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;AACd;AACA;EACE,UAAU;EACV,qBAAqB;AACvB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-7 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-linecap: round;\n}\n.dv-border-box-7 .dv-bb7-line-width-2 {\n  stroke-width: 2;\n}\n.dv-border-box-7 .dv-bb7-line-width-5 {\n  stroke-width: 5;\n}\n.dv-border-box-7 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-9a4f2d2c_0", { source: ".dv-border-box-7 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-linecap: round;\n}\n.dv-border-box-7 .dv-bb7-line-width-2 {\n  stroke-width: 2;\n}\n.dv-border-box-7 .dv-bb7-line-width-5 {\n  stroke-width: 5;\n}\n.dv-border-box-7 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;AACd;AACA;EACE,UAAU;EACV,qBAAqB;AACvB;AACA;EACE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-7 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-7 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-linecap: round;\n}\n.dv-border-box-7 .dv-bb7-line-width-2 {\n  stroke-width: 2;\n}\n.dv-border-box-7 .dv-bb7-line-width-5 {\n  stroke-width: 5;\n}\n.dv-border-box-7 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -3026,7 +3089,7 @@
   const __vue_script__$9 = script$9;
 
   /* template */
-  var __vue_render__$9 = function() {
+  var __vue_render__$9 = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -3035,14 +3098,14 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c(
             "defs",
             [
               _c("path", {
-                attrs: { id: _vm.path, d: _vm.pathD, fill: "transparent" }
+                attrs: { id: _vm.path, d: _vm.pathD, fill: "transparent" },
               }),
               _vm._v(" "),
               _c(
@@ -3053,17 +3116,17 @@
                     attrs: {
                       offset: "0%",
                       "stop-color": "#fff",
-                      "stop-opacity": "1"
-                    }
+                      "stop-opacity": "1",
+                    },
                   }),
                   _vm._v(" "),
                   _c("stop", {
                     attrs: {
                       offset: "100%",
                       "stop-color": "#fff",
-                      "stop-opacity": "0"
-                    }
-                  })
+                      "stop-opacity": "0",
+                    },
+                  }),
                 ],
                 1
               ),
@@ -3076,8 +3139,8 @@
                       cx: "0",
                       cy: "0",
                       r: "150",
-                      fill: "url(#" + _vm.gradient + ")"
-                    }
+                      fill: "url(#" + _vm.gradient + ")",
+                    },
                   },
                   [
                     _c("animateMotion", {
@@ -3085,13 +3148,13 @@
                         dur: _vm.dur + "s",
                         path: _vm.pathD,
                         rotate: "auto",
-                        repeatCount: "indefinite"
-                      }
-                    })
+                        repeatCount: "indefinite",
+                      },
+                    }),
                   ],
                   1
-                )
-              ])
+                ),
+              ]),
             ],
             1
           ),
@@ -3107,16 +3170,16 @@
                 " " +
                 (_vm.height - 5) +
                 " 5, " +
-                (_vm.height - 5)
-            }
+                (_vm.height - 5),
+            },
           }),
           _vm._v(" "),
           _c("use", {
             attrs: {
               stroke: _vm.mergedColor[0],
               "stroke-width": "1",
-              "xlink:href": "#" + _vm.path
-            }
+              "xlink:href": "#" + _vm.path,
+            },
           }),
           _vm._v(" "),
           _c(
@@ -3126,8 +3189,8 @@
                 stroke: _vm.mergedColor[1],
                 "stroke-width": "3",
                 "xlink:href": "#" + _vm.path,
-                mask: "url(#" + _vm.mask + ")"
-              }
+                mask: "url(#" + _vm.mask + ")",
+              },
             },
             [
               _c("animate", {
@@ -3136,15 +3199,15 @@
                   from: "0, " + _vm.length,
                   to: _vm.length + ", 0",
                   dur: _vm.dur + "s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
-          )
+          ),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$9 = [];
@@ -3153,7 +3216,7 @@
     /* style */
     const __vue_inject_styles__$9 = function (inject) {
       if (!inject) return
-      inject("data-v-681e49b5_0", { source: ".dv-border-box-8 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-8 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-8 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,SAAS;EACT,QAAQ;AACV;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-8 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-8 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-8 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-20af7fc6_0", { source: ".dv-border-box-8 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-8 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-8 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,SAAS;EACT,QAAQ;AACV;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-8 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-8 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-8 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -3244,7 +3307,7 @@
   const __vue_script__$a = script$a;
 
   /* template */
-  var __vue_render__$a = function() {
+  var __vue_render__$a = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -3253,7 +3316,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c(
@@ -3267,8 +3330,8 @@
                     x1: "0%",
                     y1: "0%",
                     x2: "100%",
-                    y2: "100%"
-                  }
+                    y2: "100%",
+                  },
                 },
                 [
                   _c("animate", {
@@ -3277,8 +3340,8 @@
                       values: "0%;100%;0%",
                       dur: "10s",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c("animate", {
@@ -3287,8 +3350,8 @@
                       values: "100%;0%;100%",
                       dur: "10s",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c(
@@ -3306,16 +3369,16 @@
                             _vm.mergedColor[0],
                           dur: "10s",
                           begin: "0s",
-                          repeatCount: "indefinite"
-                        }
-                      })
+                          repeatCount: "indefinite",
+                        },
+                      }),
                     ]
                   ),
                   _vm._v(" "),
                   _c(
                     "stop",
                     {
-                      attrs: { offset: "100%", "stop-color": _vm.mergedColor[1] }
+                      attrs: { offset: "100%", "stop-color": _vm.mergedColor[1] },
                     },
                     [
                       _c("animate", {
@@ -3329,11 +3392,11 @@
                             _vm.mergedColor[1],
                           dur: "10s",
                           begin: "0s",
-                          repeatCount: "indefinite"
-                        }
-                      })
+                          repeatCount: "indefinite",
+                        },
+                      }),
                     ]
-                  )
+                  ),
                 ],
                 1
               ),
@@ -3349,8 +3412,8 @@
                       _vm.height * 0.4 +
                       " 8, 3, " +
                       (_vm.width * 0.4 + 7) +
-                      ", 3"
-                  }
+                      ", 3",
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3365,8 +3428,8 @@
                       _vm.width * 0.1 +
                       ", 8 14, 8 14, " +
                       (_vm.height * 0.15 - 7) +
-                      "\n          "
-                  }
+                      "\n          ",
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3381,8 +3444,8 @@
                       ", 3, " +
                       (_vm.width - 3) +
                       ", " +
-                      _vm.height * 0.25
-                  }
+                      _vm.height * 0.25,
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3397,8 +3460,8 @@
                       (_vm.width * 0.58 - 7) +
                       ", 9 " +
                       (_vm.width * 0.52 + 7) +
-                      ", 9\n          "
-                  }
+                      ", 9\n          ",
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3421,8 +3484,8 @@
                       (_vm.width - 9) +
                       ", 9 " +
                       (_vm.width * 0.9 + 7) +
-                      ", 9\n          "
-                  }
+                      ", 9\n          ",
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3438,8 +3501,8 @@
                       " " +
                       (_vm.width * 0.3 + 7) +
                       ", " +
-                      (_vm.height - 3)
-                  }
+                      (_vm.height - 3),
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3454,8 +3517,8 @@
                       (_vm.height * 0.7 - 7) +
                       " 2, " +
                       (_vm.height * 0.55 + 7) +
-                      "\n          "
-                  }
+                      "\n          ",
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3474,8 +3537,8 @@
                       " " +
                       (_vm.width - 3) +
                       ", " +
-                      _vm.height * 0.35
-                  }
+                      _vm.height * 0.35,
+                  },
                 }),
                 _vm._v(" "),
                 _c("polyline", {
@@ -3506,10 +3569,10 @@
                       (_vm.width * 0.92 + 7) +
                       ", " +
                       (_vm.height - 9) +
-                      "\n          "
-                  }
-                })
-              ])
+                      "\n          ",
+                  },
+                }),
+              ]),
             ],
             1
           ),
@@ -3570,8 +3633,8 @@
                 (_vm.height * 0.15 - 2) +
                 " 15, " +
                 (_vm.height * 0.15 - 7) +
-                "\n    "
-            }
+                "\n    ",
+            },
           }),
           _vm._v(" "),
           _c("rect", {
@@ -3581,13 +3644,13 @@
               width: _vm.width,
               height: _vm.height,
               fill: "url(#" + _vm.gradientId + ")",
-              mask: "url(#" + _vm.maskId + ")"
-            }
-          })
+              mask: "url(#" + _vm.maskId + ")",
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$a = [];
@@ -3596,7 +3659,7 @@
     /* style */
     const __vue_inject_styles__$a = function (inject) {
       if (!inject) return
-      inject("data-v-db539808_0", { source: ".dv-border-box-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-9 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-9 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,SAAS;EACT,QAAQ;AACV;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-9 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-9 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-5a732b61_0", { source: ".dv-border-box-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-9 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-9 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,SAAS;EACT,QAAQ;AACV;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-9 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n}\n.dv-border-box-9 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -3685,7 +3748,7 @@
   const __vue_script__$b = script$b;
 
   /* template */
-  var __vue_render__$b = function() {
+  var __vue_render__$b = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -3694,14 +3757,14 @@
       {
         ref: _vm.ref,
         staticClass: "dv-border-box-10",
-        style: "box-shadow: inset 0 0 25px 3px " + _vm.mergedColor[0]
+        style: "box-shadow: inset 0 0 25px 3px " + _vm.mergedColor[0],
       },
       [
         _c(
           "svg",
           {
             staticClass: "dv-border-svg-container",
-            attrs: { width: _vm.width, height: _vm.height }
+            attrs: { width: _vm.width, height: _vm.height },
           },
           [
             _c("polygon", {
@@ -3724,32 +3787,32 @@
                   _vm.height +
                   " 0, " +
                   (_vm.height - 4) +
-                  " 0, 4\n    "
-              }
-            })
+                  " 0, 4\n    ",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
-        _vm._l(_vm.border, function(item) {
+        _vm._l(_vm.border, function (item) {
           return _c(
             "svg",
             {
               key: item,
               class: item + " dv-border-svg-container",
-              attrs: { width: "150px", height: "150px" }
+              attrs: { width: "150px", height: "150px" },
             },
             [
               _c("polygon", {
                 attrs: {
                   fill: _vm.mergedColor[1],
-                  points: "40, 0 5, 0 0, 5 0, 16 3, 19 3, 7 7, 3 35, 3"
-                }
-              })
+                  points: "40, 0 5, 0 0, 5 0, 16 3, 19 3, 7 7, 3 35, 3",
+                },
+              }),
             ]
           )
         }),
         _vm._v(" "),
-        _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+        _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
       ],
       2
     )
@@ -3760,7 +3823,7 @@
     /* style */
     const __vue_inject_styles__$b = function (inject) {
       if (!inject) return
-      inject("data-v-746a9ff1_0", { source: ".dv-border-box-10 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  border-radius: 6px;\n}\n.dv-border-box-10 .dv-border-svg-container {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-10 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-10 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-10 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-10 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,cAAc;AAChB;AACA;EACE,UAAU;EACV,0BAA0B;AAC5B;AACA;EACE,WAAW;EACX,0BAA0B;AAC5B;AACA;EACE,UAAU;EACV,WAAW;EACX,0CAA0C;AAC5C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-10 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  border-radius: 6px;\n}\n.dv-border-box-10 .dv-border-svg-container {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-10 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-10 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-10 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-10 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-0a23475a_0", { source: ".dv-border-box-10 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  border-radius: 6px;\n}\n.dv-border-box-10 .dv-border-svg-container {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-10 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-10 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-10 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-10 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,cAAc;AAChB;AACA;EACE,UAAU;EACV,0BAA0B;AAC5B;AACA;EACE,WAAW;EACX,0BAA0B;AAC5B;AACA;EACE,UAAU;EACV,WAAW;EACX,0CAA0C;AAC5C;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-10 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  border-radius: 6px;\n}\n.dv-border-box-10 .dv-border-svg-container {\n  position: absolute;\n  display: block;\n}\n.dv-border-box-10 .right-top {\n  right: 0px;\n  transform: rotateY(180deg);\n}\n.dv-border-box-10 .left-bottom {\n  bottom: 0px;\n  transform: rotateX(180deg);\n}\n.dv-border-box-10 .right-bottom {\n  right: 0px;\n  bottom: 0px;\n  transform: rotateX(180deg) rotateY(180deg);\n}\n.dv-border-box-10 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -4184,7 +4247,7 @@
   const __vue_script__$c = script$c;
 
   /* template */
-  var __vue_render__$c = function() {
+  var __vue_render__$c = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -4193,7 +4256,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("defs", [
@@ -4205,8 +4268,8 @@
                   height: "150%",
                   width: "150%",
                   x: "-25%",
-                  y: "-25%"
-                }
+                  y: "-25%",
+                },
               },
               [
                 _c("feMorphology", {
@@ -4214,19 +4277,19 @@
                     operator: "dilate",
                     radius: "2",
                     in: "SourceAlpha",
-                    result: "thicken"
-                  }
+                    result: "thicken",
+                  },
                 }),
                 _vm._v(" "),
                 _c("feGaussianBlur", {
-                  attrs: { in: "thicken", stdDeviation: "3", result: "blurred" }
+                  attrs: { in: "thicken", stdDeviation: "3", result: "blurred" },
                 }),
                 _vm._v(" "),
                 _c("feFlood", {
                   attrs: {
                     "flood-color": _vm.mergedColor[1],
-                    result: "glowColor"
-                  }
+                    result: "glowColor",
+                  },
                 }),
                 _vm._v(" "),
                 _c("feComposite", {
@@ -4234,8 +4297,8 @@
                     in: "glowColor",
                     in2: "blurred",
                     operator: "in",
-                    result: "softGlowColored"
-                  }
+                    result: "softGlowColored",
+                  },
                 }),
                 _vm._v(" "),
                 _c(
@@ -4243,13 +4306,13 @@
                   [
                     _c("feMergeNode", { attrs: { in: "softGlowColored" } }),
                     _vm._v(" "),
-                    _c("feMergeNode", { attrs: { in: "SourceGraphic" } })
+                    _c("feMergeNode", { attrs: { in: "SourceGraphic" } }),
                   ],
                   1
-                )
+                ),
               ],
               1
-            )
+            ),
           ]),
           _vm._v(" "),
           _c("polygon", {
@@ -4280,8 +4343,8 @@
                 (_vm.height - 8) +
                 " 8, " +
                 (_vm.height - 25) +
-                " 8, 50\n    "
-            }
+                " 8, 50\n    ",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -4345,8 +4408,8 @@
                 ((_vm.width + _vm.titleWidth) / 2 - 20) +
                 ", 52 " +
                 (_vm.width + _vm.titleWidth) / 2 +
-                ", 30\n      "
-            }
+                ", 30\n      ",
+            },
           }),
           _vm._v(" "),
           _c("polygon", {
@@ -4362,8 +4425,8 @@
                 ((_vm.width + _vm.titleWidth) / 2 - 27) +
                 ", 11 " +
                 ((_vm.width + _vm.titleWidth) / 2 - 8) +
-                ", 34\n      "
-            }
+                ", 34\n      ",
+            },
           }),
           _vm._v(" "),
           _c("polygon", {
@@ -4379,8 +4442,8 @@
                 ((_vm.width - _vm.titleWidth) / 2 + 28) +
                 ", 49 " +
                 ((_vm.width - _vm.titleWidth) / 2 + 8) +
-                ", 26\n      "
-            }
+                ", 26\n      ",
+            },
           }),
           _vm._v(" "),
           _c("polygon", {
@@ -4401,8 +4464,8 @@
                 ((_vm.width - _vm.titleWidth) / 2 + 33) +
                 ", 49 " +
                 ((_vm.width + _vm.titleWidth) / 2 - 22) +
-                ", 49\n      "
-            }
+                ", 49\n      ",
+            },
           }),
           _vm._v(" "),
           _c(
@@ -4421,8 +4484,8 @@
                   ((_vm.width - _vm.titleWidth) / 2 - 25) +
                   ", 46 " +
                   ((_vm.width - _vm.titleWidth) / 2 - 4) +
-                  ", 46\n      "
-              }
+                  ", 46\n      ",
+              },
             },
             [
               _c("animate", {
@@ -4431,9 +4494,9 @@
                   values: "1;0.7;1",
                   dur: "2s",
                   begin: "0s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -4453,8 +4516,8 @@
                   ((_vm.width - _vm.titleWidth) / 2 - 55) +
                   ", 46 " +
                   ((_vm.width - _vm.titleWidth) / 2 - 34) +
-                  ", 46\n      "
-              }
+                  ", 46\n      ",
+              },
             },
             [
               _c("animate", {
@@ -4463,9 +4526,9 @@
                   values: "0.7;0.4;0.7",
                   dur: "2s",
                   begin: "0s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -4485,8 +4548,8 @@
                   ((_vm.width - _vm.titleWidth) / 2 - 85) +
                   ", 46 " +
                   ((_vm.width - _vm.titleWidth) / 2 - 64) +
-                  ", 46\n      "
-              }
+                  ", 46\n      ",
+              },
             },
             [
               _c("animate", {
@@ -4495,9 +4558,9 @@
                   values: "0.5;0.2;0.5",
                   dur: "2s",
                   begin: "0s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -4517,8 +4580,8 @@
                   ((_vm.width + _vm.titleWidth) / 2 + 3) +
                   ", 46 " +
                   ((_vm.width + _vm.titleWidth) / 2 + 24) +
-                  ", 46\n      "
-              }
+                  ", 46\n      ",
+              },
             },
             [
               _c("animate", {
@@ -4527,9 +4590,9 @@
                   values: "1;0.7;1",
                   dur: "2s",
                   begin: "0s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -4549,8 +4612,8 @@
                   ((_vm.width + _vm.titleWidth) / 2 + 33) +
                   ", 46 " +
                   ((_vm.width + _vm.titleWidth) / 2 + 54) +
-                  ", 46\n      "
-              }
+                  ", 46\n      ",
+              },
             },
             [
               _c("animate", {
@@ -4559,9 +4622,9 @@
                   values: "0.7;0.4;0.7",
                   dur: "2s",
                   begin: "0s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -4581,8 +4644,8 @@
                   ((_vm.width + _vm.titleWidth) / 2 + 63) +
                   ", 46 " +
                   ((_vm.width + _vm.titleWidth) / 2 + 84) +
-                  ", 46\n      "
-              }
+                  ", 46\n      ",
+              },
             },
             [
               _c("animate", {
@@ -4591,9 +4654,9 @@
                   values: "0.5;0.2;0.5",
                   dur: "2s",
                   begin: "0s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -4607,8 +4670,8 @@
                 fill: "#fff",
                 "font-size": "18",
                 "text-anchor": "middle",
-                "dominant-baseline": "middle"
-              }
+                "dominant-baseline": "middle",
+              },
             },
             [_vm._v("\n      " + _vm._s(_vm.title) + "\n    ")]
           ),
@@ -4626,8 +4689,8 @@
                 (133 + (_vm.height - 167) / 2) +
                 " 7, " +
                 (137 + (_vm.height - 167) / 2) +
-                "\n      "
-            }
+                "\n      ",
+            },
           }),
           _vm._v(" "),
           _c("polygon", {
@@ -4651,13 +4714,13 @@
                 (_vm.width - 7) +
                 ", " +
                 (137 + (_vm.height - 167) / 2) +
-                "\n      "
-            }
-          })
+                "\n      ",
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$c = [];
@@ -4666,7 +4729,7 @@
     /* style */
     const __vue_inject_styles__$c = function (inject) {
       if (!inject) return
-      inject("data-v-10f995ec_0", { source: ".dv-border-box-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-11 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-11 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-11 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;EACV,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-11 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-11 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-11 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-8cf0ea5c_0", { source: ".dv-border-box-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-11 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-11 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-11 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,UAAU;EACV,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-11 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-11 .dv-border-svg-container > polyline {\n  fill: none;\n  stroke-width: 1;\n}\n.dv-border-box-11 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -4757,7 +4820,7 @@
   const __vue_script__$d = script$d;
 
   /* template */
-  var __vue_render__$d = function() {
+  var __vue_render__$d = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -4766,7 +4829,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("defs", [
@@ -4778,8 +4841,8 @@
                   height: "150%",
                   width: "150%",
                   x: "-25%",
-                  y: "-25%"
-                }
+                  y: "-25%",
+                },
               },
               [
                 _c("feMorphology", {
@@ -4787,12 +4850,12 @@
                     operator: "dilate",
                     radius: "1",
                     in: "SourceAlpha",
-                    result: "thicken"
-                  }
+                    result: "thicken",
+                  },
                 }),
                 _vm._v(" "),
                 _c("feGaussianBlur", {
-                  attrs: { in: "thicken", stdDeviation: "2", result: "blurred" }
+                  attrs: { in: "thicken", stdDeviation: "2", result: "blurred" },
                 }),
                 _vm._v(" "),
                 _c(
@@ -4803,8 +4866,8 @@
                         _vm.mergedColor[1] || _vm.defaultColor[1],
                         70
                       ),
-                      result: "glowColor"
-                    }
+                      result: "glowColor",
+                    },
                   },
                   [
                     _c("animate", {
@@ -4829,9 +4892,9 @@
                           ";\n            ",
                         dur: "3s",
                         begin: "0s",
-                        repeatCount: "indefinite"
-                      }
-                    })
+                        repeatCount: "indefinite",
+                      },
+                    }),
                   ]
                 ),
                 _vm._v(" "),
@@ -4840,8 +4903,8 @@
                     in: "glowColor",
                     in2: "blurred",
                     operator: "in",
-                    result: "softGlowColored"
-                  }
+                    result: "softGlowColored",
+                  },
                 }),
                 _vm._v(" "),
                 _c(
@@ -4849,13 +4912,13 @@
                   [
                     _c("feMergeNode", { attrs: { in: "softGlowColored" } }),
                     _vm._v(" "),
-                    _c("feMergeNode", { attrs: { in: "SourceGraphic" } })
+                    _c("feMergeNode", { attrs: { in: "SourceGraphic" } }),
                   ],
                   1
-                )
+                ),
               ],
               1
-            )
+            ),
           ]),
           _vm._v(" "),
           _vm.width && _vm.height
@@ -4889,8 +4952,8 @@
                     (_vm.height - 5) +
                     " 5 " +
                     (_vm.height - 15) +
-                    " L 5 15\n        Q 5 5 15 5\n      "
-                }
+                    " L 5 15\n        Q 5 5 15 5\n      ",
+                },
               })
             : _vm._e(),
           _vm._v(" "),
@@ -4901,8 +4964,8 @@
               "stroke-linecap": "round",
               filter: "url(#" + _vm.filterId + ")",
               stroke: _vm.mergedColor[1],
-              d: "M 20 5 L 15 5 Q 5 5 5 15 L 5 20"
-            }
+              d: "M 20 5 L 15 5 Q 5 5 5 15 L 5 20",
+            },
           }),
           _vm._v(" "),
           _c("path", {
@@ -4923,8 +4986,8 @@
                 (_vm.width - 5) +
                 " 15 L " +
                 (_vm.width - 5) +
-                " 20"
-            }
+                " 20",
+            },
           }),
           _vm._v(" "),
           _c("path", {
@@ -4955,8 +5018,8 @@
                 (_vm.width - 5) +
                 " " +
                 (_vm.height - 20) +
-                "\n      "
-            }
+                "\n      ",
+            },
           }),
           _vm._v(" "),
           _c("path", {
@@ -4977,13 +5040,13 @@
                 (_vm.height - 15) +
                 "\n        L 5 " +
                 (_vm.height - 20) +
-                "\n      "
-            }
-          })
+                "\n      ",
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$d = [];
@@ -4992,7 +5055,7 @@
     /* style */
     const __vue_inject_styles__$d = function (inject) {
       if (!inject) return
-      inject("data-v-40c58fd4_0", { source: ".dv-border-box-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-12 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-12 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-12 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-12 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-de502992_0", { source: ".dv-border-box-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-12 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-12 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-12 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-12 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -5080,7 +5143,7 @@
   const __vue_script__$e = script$e;
 
   /* template */
-  var __vue_render__$e = function() {
+  var __vue_render__$e = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -5089,7 +5152,7 @@
         "svg",
         {
           staticClass: "dv-border-svg-container",
-          attrs: { width: _vm.width, height: _vm.height }
+          attrs: { width: _vm.width, height: _vm.height },
         },
         [
           _c("path", {
@@ -5109,8 +5172,8 @@
                 (_vm.height - 5) +
                 "\n        L 5 " +
                 (_vm.height - 20) +
-                " L 5 20\n      "
-            }
+                " L 5 20\n      ",
+            },
           }),
           _vm._v(" "),
           _c("path", {
@@ -5120,16 +5183,16 @@
               "stroke-linecap": "round",
               "stroke-dasharray": "10, 5",
               stroke: _vm.mergedColor[0],
-              d: "M 16 9 L 61 9"
-            }
+              d: "M 16 9 L 61 9",
+            },
           }),
           _vm._v(" "),
           _c("path", {
             attrs: {
               fill: "transparent",
               stroke: _vm.mergedColor[1],
-              d: "M 5 20 L 5 10 L 12 3  L 60 3 L 68 10"
-            }
+              d: "M 5 20 L 5 10 L 12 3  L 60 3 L 68 10",
+            },
           }),
           _vm._v(" "),
           _c("path", {
@@ -5148,13 +5211,13 @@
                 " L " +
                 (_vm.width - 30) +
                 " " +
-                (_vm.height - 5)
-            }
-          })
+                (_vm.height - 5),
+            },
+          }),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "border-box-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$e = [];
@@ -5163,7 +5226,7 @@
     /* style */
     const __vue_inject_styles__$e = function (inject) {
       if (!inject) return
-      inject("data-v-6c30a53b_0", { source: ".dv-border-box-13 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-13 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-13 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-13 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-13 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-13 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-e7ea3b48_0", { source: ".dv-border-box-13 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-13 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-13 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-border-box-13 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-border-box-13 .dv-border-svg-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-border-box-13 .border-box-content {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -5314,7 +5377,7 @@
   const __vue_script__$f = script$f;
 
   /* template */
-  var __vue_render__$f = function() {
+  var __vue_render__$f = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -5324,10 +5387,10 @@
         {
           style:
             "transform:scale(" + _vm.svgScale[0] + "," + _vm.svgScale[1] + ");",
-          attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" }
+          attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" },
         },
         [
-          _vm._l(_vm.points, function(point, i) {
+          _vm._l(_vm.points, function (point, i) {
             return [
               Math.random() > 0.6
                 ? _c(
@@ -5339,8 +5402,8 @@
                         x: point[0] - _vm.halfPointSideLength,
                         y: point[1] - _vm.halfPointSideLength,
                         width: _vm.pointSideLength,
-                        height: _vm.pointSideLength
-                      }
+                        height: _vm.pointSideLength,
+                      },
                     },
                     [
                       Math.random() > 0.6
@@ -5350,13 +5413,13 @@
                               values: _vm.mergedColor[0] + ";transparent",
                               dur: "1s",
                               begin: Math.random() * 2,
-                              repeatCount: "indefinite"
-                            }
+                              repeatCount: "indefinite",
+                            },
                           })
-                        : _vm._e()
+                        : _vm._e(),
                     ]
                   )
-                : _vm._e()
+                : _vm._e(),
             ]
           }),
           _vm._v(" "),
@@ -5369,8 +5432,8 @@
                     x: _vm.rects[0][0] - _vm.pointSideLength,
                     y: _vm.rects[0][1] - _vm.pointSideLength,
                     width: _vm.pointSideLength * 2,
-                    height: _vm.pointSideLength * 2
-                  }
+                    height: _vm.pointSideLength * 2,
+                  },
                 },
                 [
                   _c("animate", {
@@ -5378,8 +5441,8 @@
                       attributeName: "width",
                       values: "0;" + _vm.pointSideLength * 2,
                       dur: "2s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c("animate", {
@@ -5387,8 +5450,8 @@
                       attributeName: "height",
                       values: "0;" + _vm.pointSideLength * 2,
                       dur: "2s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c("animate", {
@@ -5399,8 +5462,8 @@
                         ";" +
                         (_vm.rects[0][0] - _vm.pointSideLength),
                       dur: "2s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c("animate", {
@@ -5411,9 +5474,9 @@
                         ";" +
                         (_vm.rects[0][1] - _vm.pointSideLength),
                       dur: "2s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ]
               )
             : _vm._e(),
@@ -5427,8 +5490,8 @@
                     x: _vm.rects[1][0] - 40,
                     y: _vm.rects[1][1] - _vm.pointSideLength,
                     width: 40,
-                    height: _vm.pointSideLength * 2
-                  }
+                    height: _vm.pointSideLength * 2,
+                  },
                 },
                 [
                   _c("animate", {
@@ -5436,8 +5499,8 @@
                       attributeName: "width",
                       values: "0;40;0",
                       dur: "2s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c("animate", {
@@ -5450,15 +5513,15 @@
                         ";" +
                         _vm.rects[1][0],
                       dur: "2s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ]
               )
-            : _vm._e()
+            : _vm._e(),
         ],
         2
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$f = [];
@@ -5467,7 +5530,7 @@
     /* style */
     const __vue_inject_styles__$f = function (inject) {
       if (!inject) return
-      inject("data-v-69241e60_0", { source: ".dv-decoration-1 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-1 svg {\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-1 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-1 svg {\n  transform-origin: left top;\n}\n"]}, media: undefined });
+      inject("data-v-714eb17e_0", { source: ".dv-decoration-1 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-1 svg {\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-1 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-1 svg {\n  transform-origin: left top;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -5604,7 +5667,7 @@
   const __vue_script__$g = script$g;
 
   /* template */
-  var __vue_render__$g = function() {
+  var __vue_render__$g = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -5621,8 +5684,8 @@
                 y: _vm.y,
                 width: _vm.w,
                 height: _vm.h,
-                fill: _vm.mergedColor[0]
-              }
+                fill: _vm.mergedColor[0],
+              },
             },
             [
               _c("animate", {
@@ -5634,9 +5697,9 @@
                   calcMode: "spline",
                   keyTimes: "0;1",
                   keySplines: ".42,0,.58,1",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
@@ -5648,8 +5711,8 @@
                 y: _vm.y,
                 width: "1",
                 height: "1",
-                fill: _vm.mergedColor[1]
-              }
+                fill: _vm.mergedColor[1],
+              },
             },
             [
               _c("animate", {
@@ -5661,13 +5724,13 @@
                   calcMode: "spline",
                   keyTimes: "0;1",
                   keySplines: "0.42,0,0.58,1",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
-          )
+          ),
         ]
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$g = [];
@@ -5676,7 +5739,7 @@
     /* style */
     const __vue_inject_styles__$g = function (inject) {
       if (!inject) return
-      inject("data-v-355e4674_0", { source: ".dv-decoration-2 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-decoration-2 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n"]}, media: undefined });
+      inject("data-v-56257acf_0", { source: ".dv-decoration-2 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-decoration-2 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -5814,7 +5877,7 @@
   const __vue_script__$h = script$h;
 
   /* template */
-  var __vue_render__$h = function() {
+  var __vue_render__$h = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -5824,10 +5887,10 @@
         {
           style:
             "transform:scale(" + _vm.svgScale[0] + "," + _vm.svgScale[1] + ");",
-          attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" }
+          attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" },
         },
         [
-          _vm._l(_vm.points, function(point, i) {
+          _vm._l(_vm.points, function (point, i) {
             return [
               _c(
                 "rect",
@@ -5838,8 +5901,8 @@
                     x: point[0] - _vm.halfPointSideLength,
                     y: point[1] - _vm.halfPointSideLength,
                     width: _vm.pointSideLength,
-                    height: _vm.pointSideLength
-                  }
+                    height: _vm.pointSideLength,
+                  },
                 },
                 [
                   Math.random() > 0.6
@@ -5849,17 +5912,17 @@
                           values: "" + _vm.mergedColor.join(";"),
                           dur: Math.random() + 1 + "s",
                           begin: Math.random() * 2,
-                          repeatCount: "indefinite"
-                        }
+                          repeatCount: "indefinite",
+                        },
                       })
-                    : _vm._e()
+                    : _vm._e(),
                 ]
-              )
+              ),
             ]
-          })
+          }),
         ],
         2
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$h = [];
@@ -5868,7 +5931,7 @@
     /* style */
     const __vue_inject_styles__$h = function (inject) {
       if (!inject) return
-      inject("data-v-2cd3ac93_0", { source: ".dv-decoration-3 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-3 svg {\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-3 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-3 svg {\n  transform-origin: left top;\n}\n"]}, media: undefined });
+      inject("data-v-3cfec462_0", { source: ".dv-decoration-3 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-3 svg {\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-3 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-3 svg {\n  transform-origin: left top;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -5960,7 +6023,7 @@
   const __vue_script__$i = script$i;
 
   /* template */
-  var __vue_render__$i = function() {
+  var __vue_render__$i = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -5979,7 +6042,7 @@
               _vm.height +
               "px;animation-duration:" +
               _vm.dur +
-              "s"
+              "s",
         },
         [
           _c(
@@ -5987,8 +6050,8 @@
             {
               attrs: {
                 width: _vm.reverse ? _vm.width : 5,
-                height: _vm.reverse ? 5 : _vm.height
-              }
+                height: _vm.reverse ? 5 : _vm.height,
+              },
             },
             [
               _c("polyline", {
@@ -5996,8 +6059,8 @@
                   stroke: _vm.mergedColor[0],
                   points: _vm.reverse
                     ? "0, 2.5 " + _vm.width + ", 2.5"
-                    : "2.5, 0 2.5, " + _vm.height
-                }
+                    : "2.5, 0 2.5, " + _vm.height,
+                },
               }),
               _vm._v(" "),
               _c("polyline", {
@@ -6009,13 +6072,13 @@
                   "stroke-dashoffset": "-30",
                   points: _vm.reverse
                     ? "0, 2.5 " + _vm.width + ", 2.5"
-                    : "2.5, 0 2.5, " + _vm.height
-                }
-              })
+                    : "2.5, 0 2.5, " + _vm.height,
+                },
+              }),
             ]
-          )
+          ),
         ]
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$i = [];
@@ -6024,7 +6087,7 @@
     /* style */
     const __vue_inject_styles__$i = function (inject) {
       if (!inject) return
-      inject("data-v-506ac984_0", { source: ".dv-decoration-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-4 .container {\n  display: flex;\n  overflow: hidden;\n  position: absolute;\n  flex: 1;\n}\n.dv-decoration-4 .normal {\n  animation: ani-height ease-in-out infinite;\n  left: 50%;\n  margin-left: -2px;\n}\n.dv-decoration-4 .reverse {\n  animation: ani-width ease-in-out infinite;\n  top: 50%;\n  margin-top: -2px;\n}\n@keyframes ani-height {\n0% {\n    height: 0%;\n}\n70% {\n    height: 100%;\n}\n100% {\n    height: 100%;\n}\n}\n@keyframes ani-width {\n0% {\n    width: 0%;\n}\n70% {\n    width: 100%;\n}\n100% {\n    width: 100%;\n}\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,OAAO;AACT;AACA;EACE,0CAA0C;EAC1C,SAAS;EACT,iBAAiB;AACnB;AACA;EACE,yCAAyC;EACzC,QAAQ;EACR,gBAAgB;AAClB;AACA;AACE;IACE,UAAU;AACZ;AACA;IACE,YAAY;AACd;AACA;IACE,YAAY;AACd;AACF;AACA;AACE;IACE,SAAS;AACX;AACA;IACE,WAAW;AACb;AACA;IACE,WAAW;AACb;AACF","file":"main.vue","sourcesContent":[".dv-decoration-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-4 .container {\n  display: flex;\n  overflow: hidden;\n  position: absolute;\n  flex: 1;\n}\n.dv-decoration-4 .normal {\n  animation: ani-height ease-in-out infinite;\n  left: 50%;\n  margin-left: -2px;\n}\n.dv-decoration-4 .reverse {\n  animation: ani-width ease-in-out infinite;\n  top: 50%;\n  margin-top: -2px;\n}\n@keyframes ani-height {\n  0% {\n    height: 0%;\n  }\n  70% {\n    height: 100%;\n  }\n  100% {\n    height: 100%;\n  }\n}\n@keyframes ani-width {\n  0% {\n    width: 0%;\n  }\n  70% {\n    width: 100%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n"]}, media: undefined });
+      inject("data-v-509caa02_0", { source: ".dv-decoration-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-4 .container {\n  display: flex;\n  overflow: hidden;\n  position: absolute;\n  flex: 1;\n}\n.dv-decoration-4 .normal {\n  animation: ani-height ease-in-out infinite;\n  left: 50%;\n  margin-left: -2px;\n}\n.dv-decoration-4 .reverse {\n  animation: ani-width ease-in-out infinite;\n  top: 50%;\n  margin-top: -2px;\n}\n@keyframes ani-height {\n0% {\n    height: 0%;\n}\n70% {\n    height: 100%;\n}\n100% {\n    height: 100%;\n}\n}\n@keyframes ani-width {\n0% {\n    width: 0%;\n}\n70% {\n    width: 100%;\n}\n100% {\n    width: 100%;\n}\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,OAAO;AACT;AACA;EACE,0CAA0C;EAC1C,SAAS;EACT,iBAAiB;AACnB;AACA;EACE,yCAAyC;EACzC,QAAQ;EACR,gBAAgB;AAClB;AACA;AACE;IACE,UAAU;AACZ;AACA;IACE,YAAY;AACd;AACA;IACE,YAAY;AACd;AACF;AACA;AACE;IACE,SAAS;AACX;AACA;IACE,WAAW;AACb;AACA;IACE,WAAW;AACb;AACF","file":"main.vue","sourcesContent":[".dv-decoration-4 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-4 .container {\n  display: flex;\n  overflow: hidden;\n  position: absolute;\n  flex: 1;\n}\n.dv-decoration-4 .normal {\n  animation: ani-height ease-in-out infinite;\n  left: 50%;\n  margin-left: -2px;\n}\n.dv-decoration-4 .reverse {\n  animation: ani-width ease-in-out infinite;\n  top: 50%;\n  margin-top: -2px;\n}\n@keyframes ani-height {\n  0% {\n    height: 0%;\n  }\n  70% {\n    height: 100%;\n  }\n  100% {\n    height: 100%;\n  }\n}\n@keyframes ani-width {\n  0% {\n    width: 0%;\n  }\n  70% {\n    width: 100%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -6147,7 +6210,7 @@
   const __vue_script__$j = script$j;
 
   /* template */
-  var __vue_render__$j = function() {
+  var __vue_render__$j = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -6160,8 +6223,8 @@
               fill: "transparent",
               stroke: _vm.mergedColor[0],
               "stroke-width": "3",
-              points: _vm.line1Points
-            }
+              points: _vm.line1Points,
+            },
           },
           [
             _c("animate", {
@@ -6175,9 +6238,9 @@
                 calcMode: "spline",
                 keyTimes: "0;1",
                 keySplines: "0.4,1,0.49,0.98",
-                repeatCount: "indefinite"
-              }
-            })
+                repeatCount: "indefinite",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -6188,8 +6251,8 @@
               fill: "transparent",
               stroke: _vm.mergedColor[1],
               "stroke-width": "2",
-              points: _vm.line2Points
-            }
+              points: _vm.line2Points,
+            },
           },
           [
             _c("animate", {
@@ -6203,12 +6266,12 @@
                 calcMode: "spline",
                 keyTimes: "0;1",
                 keySplines: ".4,1,.49,.98",
-                repeatCount: "indefinite"
-              }
-            })
+                repeatCount: "indefinite",
+              },
+            }),
           ]
-        )
-      ])
+        ),
+      ]),
     ])
   };
   var __vue_staticRenderFns__$j = [];
@@ -6217,7 +6280,7 @@
     /* style */
     const __vue_inject_styles__$j = function (inject) {
       if (!inject) return
-      inject("data-v-183f85bc_0", { source: ".dv-decoration-5 {\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-decoration-5 {\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-051ba040_0", { source: ".dv-decoration-5 {\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-decoration-5 {\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -6361,7 +6424,7 @@
   const __vue_script__$k = script$k;
 
   /* template */
-  var __vue_render__$k = function() {
+  var __vue_render__$k = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -6371,10 +6434,10 @@
         {
           style:
             "transform:scale(" + _vm.svgScale[0] + "," + _vm.svgScale[1] + ");",
-          attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" }
+          attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" },
         },
         [
-          _vm._l(_vm.points, function(point, i) {
+          _vm._l(_vm.points, function (point, i) {
             return [
               _c(
                 "rect",
@@ -6385,8 +6448,8 @@
                     x: point[0] - _vm.halfRectWidth,
                     y: point[1] - _vm.heights[i] / 2,
                     width: _vm.rectWidth,
-                    height: _vm.heights[i]
-                  }
+                    height: _vm.heights[i],
+                  },
                 },
                 [
                   _c("animate", {
@@ -6404,8 +6467,8 @@
                       calcMode: "spline",
                       keySplines: "0.42,0,0.58,1;0.42,0,0.58,1",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
+                      repeatCount: "indefinite",
+                    },
                   }),
                   _vm._v(" "),
                   _c("animate", {
@@ -6422,16 +6485,16 @@
                       calcMode: "spline",
                       keySplines: "0.42,0,0.58,1;0.42,0,0.58,1",
                       begin: "0s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ]
-              )
+              ),
             ]
-          })
+          }),
         ],
         2
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$k = [];
@@ -6440,7 +6503,7 @@
     /* style */
     const __vue_inject_styles__$k = function (inject) {
       if (!inject) return
-      inject("data-v-a29c4fc2_0", { source: ".dv-decoration-6 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-6 svg {\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-6 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-6 svg {\n  transform-origin: left top;\n}\n"]}, media: undefined });
+      inject("data-v-38948098_0", { source: ".dv-decoration-6 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-6 svg {\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-6 {\n  width: 100%;\n  height: 100%;\n}\n.dv-decoration-6 svg {\n  transform-origin: left top;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -6522,7 +6585,7 @@
   const __vue_script__$l = script$l;
 
   /* template */
-  var __vue_render__$l = function() {
+  var __vue_render__$l = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -6536,8 +6599,8 @@
               "stroke-width": "4",
               fill: "transparent",
               stroke: _vm.mergedColor[0],
-              points: "10, 0 19, 10 10, 20"
-            }
+              points: "10, 0 19, 10 10, 20",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -6545,9 +6608,9 @@
               "stroke-width": "2",
               fill: "transparent",
               stroke: _vm.mergedColor[1],
-              points: "2, 0 11, 10 2, 20"
-            }
-          })
+              points: "2, 0 11, 10 2, 20",
+            },
+          }),
         ]),
         _vm._v(" "),
         _vm._t("default"),
@@ -6558,8 +6621,8 @@
               "stroke-width": "4",
               fill: "transparent",
               stroke: _vm.mergedColor[0],
-              points: "11, 0 2, 10 11, 20"
-            }
+              points: "11, 0 2, 10 11, 20",
+            },
           }),
           _vm._v(" "),
           _c("polyline", {
@@ -6567,10 +6630,10 @@
               "stroke-width": "2",
               fill: "transparent",
               stroke: _vm.mergedColor[1],
-              points: "19, 0 10, 10 19, 20"
-            }
-          })
-        ])
+              points: "19, 0 10, 10 19, 20",
+            },
+          }),
+        ]),
       ],
       2
     )
@@ -6581,7 +6644,7 @@
     /* style */
     const __vue_inject_styles__$l = function (inject) {
       if (!inject) return
-      inject("data-v-b84d1f12_0", { source: ".dv-decoration-7 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-decoration-7 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n"]}, media: undefined });
+      inject("data-v-c8420c3e_0", { source: ".dv-decoration-7 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-decoration-7 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -6678,7 +6741,7 @@
   const __vue_script__$m = script$m;
 
   /* template */
-  var __vue_render__$m = function() {
+  var __vue_render__$m = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -6689,8 +6752,8 @@
             stroke: _vm.mergedColor[0],
             "stroke-width": "2",
             fill: "transparent",
-            points: _vm.xPos(0) + ", 0 " + _vm.xPos(30) + ", " + _vm.height / 2
-          }
+            points: _vm.xPos(0) + ", 0 " + _vm.xPos(30) + ", " + _vm.height / 2,
+          },
         }),
         _vm._v(" "),
         _c("polyline", {
@@ -6707,8 +6770,8 @@
               " " +
               _vm.xPos(_vm.width) +
               ", " +
-              _vm.height / 2
-          }
+              _vm.height / 2,
+          },
         }),
         _vm._v(" "),
         _c("polyline", {
@@ -6723,10 +6786,10 @@
               ", " +
               _vm.xPos(200) +
               ", " +
-              (_vm.height - 3)
-          }
-        })
-      ])
+              (_vm.height - 3),
+          },
+        }),
+      ]),
     ])
   };
   var __vue_staticRenderFns__$m = [];
@@ -6735,7 +6798,7 @@
     /* style */
     const __vue_inject_styles__$m = function (inject) {
       if (!inject) return
-      inject("data-v-53cf43a5_0", { source: ".dv-decoration-8 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-decoration-8 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-51c95700_0", { source: ".dv-decoration-8 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-decoration-8 {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -6852,7 +6915,7 @@
   const __vue_script__$n = script$n;
 
   /* template */
-  var __vue_render__$n = function() {
+  var __vue_render__$n = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -6865,16 +6928,16 @@
           {
             style:
               "transform:scale(" + _vm.svgScale[0] + "," + _vm.svgScale[1] + ");",
-            attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" }
+            attrs: { width: _vm.svgWH[0] + "px", height: _vm.svgWH[1] + "px" },
           },
           [
             _c("defs", [
               _c("polygon", {
                 attrs: {
                   id: _vm.polygonId,
-                  points: "15, 46.5, 21, 47.5, 21, 52.5, 15, 53.5"
-                }
-              })
+                  points: "15, 46.5, 21, 47.5, 21, 52.5, 15, 53.5",
+                },
+              }),
             ]),
             _vm._v(" "),
             _c(
@@ -6887,8 +6950,8 @@
                   fill: "transparent",
                   stroke: _vm.mergedColor[1],
                   "stroke-width": "10",
-                  "stroke-dasharray": "80, 100, 30, 100"
-                }
+                  "stroke-dasharray": "80, 100, 30, 100",
+                },
               },
               [
                 _c("animateTransform", {
@@ -6897,9 +6960,9 @@
                     type: "rotate",
                     values: "0 50 50;360 50 50",
                     dur: _vm.dur + "s",
-                    repeatCount: "indefinite"
-                  }
-                })
+                    repeatCount: "indefinite",
+                  },
+                }),
               ],
               1
             ),
@@ -6914,8 +6977,8 @@
                   fill: "transparent",
                   stroke: _vm.mergedColor[0],
                   "stroke-width": "6",
-                  "stroke-dasharray": "50, 66, 100, 66"
-                }
+                  "stroke-dasharray": "50, 66, 100, 66",
+                },
               },
               [
                 _c("animateTransform", {
@@ -6924,9 +6987,9 @@
                     type: "rotate",
                     values: "0 50 50;-360 50 50",
                     dur: _vm.dur + "s",
-                    repeatCount: "indefinite"
-                  }
-                })
+                    repeatCount: "indefinite",
+                  },
+                }),
               ],
               1
             ),
@@ -6939,11 +7002,11 @@
                 fill: "transparent",
                 stroke: _vm.fade(_vm.mergedColor[1] || _vm.defaultColor[1], 30),
                 "stroke-width": "1",
-                "stroke-dasharray": "5, 1"
-              }
+                "stroke-dasharray": "5, 1",
+              },
             }),
             _vm._v(" "),
-            _vm._l(new Array(20).fill(0), function(foo, i) {
+            _vm._l(new Array(20).fill(0), function (foo, i) {
               return _c(
                 "use",
                 {
@@ -6951,8 +7014,9 @@
                   attrs: {
                     "xlink:href": "#" + _vm.polygonId,
                     stroke: _vm.mergedColor[1],
-                    fill: Math.random() > 0.4 ? "transparent" : _vm.mergedColor[0]
-                  }
+                    fill:
+                      Math.random() > 0.4 ? "transparent" : _vm.mergedColor[0],
+                  },
                 },
                 [
                   _c("animateTransform", {
@@ -6962,9 +7026,9 @@
                       values: "0 50 50;360 50 50",
                       dur: _vm.dur + "s",
                       begin: (i * _vm.dur) / 20 + "s",
-                      repeatCount: "indefinite"
-                    }
-                  })
+                      repeatCount: "indefinite",
+                    },
+                  }),
                 ],
                 1
               )
@@ -6978,14 +7042,14 @@
                 fill: "transparent",
                 stroke: _vm.fade(_vm.mergedColor[1] || _vm.defaultColor[1], 30),
                 "stroke-width": "1",
-                "stroke-dasharray": "5, 1"
-              }
-            })
+                "stroke-dasharray": "5, 1",
+              },
+            }),
           ],
           2
         ),
         _vm._v(" "),
-        _vm._t("default")
+        _vm._t("default"),
       ],
       2
     )
@@ -6996,7 +7060,7 @@
     /* style */
     const __vue_inject_styles__$n = function (inject) {
       if (!inject) return
-      inject("data-v-b47f91a8_0", { source: ".dv-decoration-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.dv-decoration-9 svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.dv-decoration-9 svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  transform-origin: left top;\n}\n"]}, media: undefined });
+      inject("data-v-d3ecf8ec_0", { source: ".dv-decoration-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.dv-decoration-9 svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  transform-origin: left top;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,0BAA0B;AAC5B","file":"main.vue","sourcesContent":[".dv-decoration-9 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.dv-decoration-9 svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  transform-origin: left top;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -7088,7 +7152,7 @@
   const __vue_script__$o = script$o;
 
   /* template */
-  var __vue_render__$o = function() {
+  var __vue_render__$o = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -7099,8 +7163,8 @@
             stroke: _vm.mergedColor[1],
             "stroke-width": "2",
             points:
-              "0, " + _vm.height / 2 + " " + _vm.width + ", " + _vm.height / 2
-          }
+              "0, " + _vm.height / 2 + " " + _vm.width + ", " + _vm.height / 2,
+          },
         }),
         _vm._v(" "),
         _c(
@@ -7117,8 +7181,8 @@
                 ", " +
                 _vm.height / 2,
               "stroke-dasharray": "0, " + _vm.width * 0.2,
-              fill: "freeze"
-            }
+              fill: "freeze",
+            },
           },
           [
             _c("animate", {
@@ -7128,8 +7192,8 @@
                 values: "0, " + _vm.width * 0.2 + ";" + _vm.width * 0.2 + ", 0;",
                 dur: "3s",
                 begin: _vm.animationId1 + ".end",
-                fill: "freeze"
-              }
+                fill: "freeze",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -7138,9 +7202,9 @@
                 values: _vm.width * 0.2 + ", 0;0, " + _vm.width * 0.2,
                 dur: "0.01s",
                 begin: _vm.animationId7 + ".end",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -7159,8 +7223,8 @@
                 (_vm.width * 0.8 - 3) +
                 ", " +
                 _vm.height / 2,
-              "stroke-dasharray": "0, " + _vm.width * 0.6
-            }
+              "stroke-dasharray": "0, " + _vm.width * 0.6,
+            },
           },
           [
             _c("animate", {
@@ -7170,8 +7234,8 @@
                 values: "0, " + _vm.width * 0.6 + ";" + _vm.width * 0.6 + ", 0",
                 dur: "3s",
                 begin: _vm.animationId3 + ".end + 1s",
-                fill: "freeze"
-              }
+                fill: "freeze",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -7180,9 +7244,9 @@
                 values: _vm.width * 0.6 + ", 0;0, " + _vm.width * 0.6,
                 dur: "0.01s",
                 begin: _vm.animationId7 + ".end",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -7201,8 +7265,8 @@
                 (_vm.width - 5) +
                 ", " +
                 _vm.height / 2,
-              "stroke-dasharray": "0, " + _vm.width * 0.2
-            }
+              "stroke-dasharray": "0, " + _vm.width * 0.2,
+            },
           },
           [
             _c("animate", {
@@ -7212,8 +7276,8 @@
                 values: "0, " + _vm.width * 0.2 + ";" + _vm.width * 0.2 + ", 0",
                 dur: "3s",
                 begin: _vm.animationId5 + ".end + 1s",
-                fill: "freeze"
-              }
+                fill: "freeze",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -7222,9 +7286,9 @@
                 values: _vm.width * 0.2 + ", 0;0, " + _vm.width * 0.3,
                 dur: "0.01s",
                 begin: _vm.animationId7 + ".end",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -7235,8 +7299,8 @@
               cx: "2",
               cy: _vm.height / 2,
               r: "2",
-              fill: _vm.mergedColor[1]
-            }
+              fill: _vm.mergedColor[1],
+            },
           },
           [
             _c("animate", {
@@ -7246,9 +7310,9 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[0],
                 begin: "0s;" + _vm.animationId7 + ".end",
                 dur: "0.3s",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -7259,8 +7323,8 @@
               cx: _vm.width * 0.2,
               cy: _vm.height / 2,
               r: "2",
-              fill: _vm.mergedColor[1]
-            }
+              fill: _vm.mergedColor[1],
+            },
           },
           [
             _c("animate", {
@@ -7270,8 +7334,8 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[0],
                 begin: _vm.animationId2 + ".end",
                 dur: "0.3s",
-                fill: "freeze"
-              }
+                fill: "freeze",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -7280,9 +7344,9 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[1],
                 dur: "0.01s",
                 begin: _vm.animationId7 + ".end",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -7293,8 +7357,8 @@
               cx: _vm.width * 0.8,
               cy: _vm.height / 2,
               r: "2",
-              fill: _vm.mergedColor[1]
-            }
+              fill: _vm.mergedColor[1],
+            },
           },
           [
             _c("animate", {
@@ -7304,8 +7368,8 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[0],
                 begin: _vm.animationId4 + ".end",
                 dur: "0.3s",
-                fill: "freeze"
-              }
+                fill: "freeze",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -7314,9 +7378,9 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[1],
                 dur: "0.01s",
                 begin: _vm.animationId7 + ".end",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
         ),
         _vm._v(" "),
@@ -7327,8 +7391,8 @@
               cx: _vm.width - 2,
               cy: _vm.height / 2,
               r: "2",
-              fill: _vm.mergedColor[1]
-            }
+              fill: _vm.mergedColor[1],
+            },
           },
           [
             _c("animate", {
@@ -7338,8 +7402,8 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[0],
                 begin: _vm.animationId6 + ".end",
                 dur: "0.3s",
-                fill: "freeze"
-              }
+                fill: "freeze",
+              },
             }),
             _vm._v(" "),
             _c("animate", {
@@ -7348,12 +7412,12 @@
                 values: _vm.mergedColor[1] + ";" + _vm.mergedColor[1],
                 dur: "0.01s",
                 begin: _vm.animationId7 + ".end",
-                fill: "freeze"
-              }
-            })
+                fill: "freeze",
+              },
+            }),
           ]
-        )
-      ])
+        ),
+      ]),
     ])
   };
   var __vue_staticRenderFns__$o = [];
@@ -7362,7 +7426,7 @@
     /* style */
     const __vue_inject_styles__$o = function (inject) {
       if (!inject) return
-      inject("data-v-23172a05_0", { source: ".dv-decoration-10 {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;AACf","file":"main.vue","sourcesContent":[".dv-decoration-10 {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n"]}, media: undefined });
+      inject("data-v-6a4fcfa6_0", { source: ".dv-decoration-10 {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,aAAa;AACf","file":"main.vue","sourcesContent":[".dv-decoration-10 {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -7447,7 +7511,7 @@
   const __vue_script__$p = script$p;
 
   /* template */
-  var __vue_render__$p = function() {
+  var __vue_render__$p = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -7457,8 +7521,8 @@
           attrs: {
             fill: _vm.fade(_vm.mergedColor[1] || _vm.defaultColor[1], 10),
             stroke: _vm.mergedColor[1],
-            points: "20 10, 25 4, 55 4 60 10"
-          }
+            points: "20 10, 25 4, 55 4 60 10",
+          },
         }),
         _vm._v(" "),
         _c("polygon", {
@@ -7473,8 +7537,8 @@
               ", 55 " +
               (_vm.height - 4) +
               " 60 " +
-              (_vm.height - 10)
-          }
+              (_vm.height - 10),
+          },
         }),
         _vm._v(" "),
         _c("polygon", {
@@ -7490,8 +7554,8 @@
               (_vm.width - 55) +
               " 4 " +
               (_vm.width - 60) +
-              " 10"
-          }
+              " 10",
+          },
         }),
         _vm._v(" "),
         _c("polygon", {
@@ -7514,8 +7578,8 @@
               " " +
               (_vm.width - 60) +
               " " +
-              (_vm.height - 10)
-          }
+              (_vm.height - 10),
+          },
         }),
         _vm._v(" "),
         _c("polygon", {
@@ -7537,16 +7601,16 @@
               _vm.height / 2 +
               " " +
               (_vm.width - 20) +
-              " 10\n      "
-          }
+              " 10\n      ",
+          },
         }),
         _vm._v(" "),
         _c("polyline", {
           attrs: {
             fill: "transparent",
             stroke: _vm.fade(_vm.mergedColor[0] || _vm.defaultColor[0], 70),
-            points: "25 18, 15 " + _vm.height / 2 + " 25 " + (_vm.height - 18)
-          }
+            points: "25 18, 15 " + _vm.height / 2 + " 25 " + (_vm.height - 18),
+          },
         }),
         _vm._v(" "),
         _c("polyline", {
@@ -7563,12 +7627,12 @@
               " " +
               (_vm.width - 25) +
               " " +
-              (_vm.height - 18)
-          }
-        })
+              (_vm.height - 18),
+          },
+        }),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "decoration-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "decoration-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$p = [];
@@ -7577,7 +7641,7 @@
     /* style */
     const __vue_inject_styles__$p = function (inject) {
       if (!inject) return
-      inject("data-v-53895fd4_0", { source: ".dv-decoration-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-11 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,aAAa;AACf;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","file":"main.vue","sourcesContent":[".dv-decoration-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-11 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"]}, media: undefined });
+      inject("data-v-a069f40a_0", { source: ".dv-decoration-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-11 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,aAAa;AACf;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","file":"main.vue","sourcesContent":[".dv-decoration-11 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-11 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -7797,7 +7861,7 @@
   const __vue_script__$q = script$q;
 
   /* template */
-  var __vue_render__$q = function() {
+  var __vue_render__$q = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -7812,15 +7876,15 @@
               _c(
                 "g",
                 { attrs: { id: _vm.gId } },
-                _vm._l(_vm.pathD, function(d, i) {
+                _vm._l(_vm.pathD, function (d, i) {
                   return _c("path", {
                     key: d,
                     attrs: {
                       stroke: _vm.pathColor[i],
                       "stroke-width": _vm.width / 2,
                       fill: "transparent",
-                      d: d
-                    }
+                      d: d,
+                    },
                   })
                 }),
                 0
@@ -7834,8 +7898,8 @@
                     attrs: {
                       offset: "0%",
                       "stop-color": "transparent",
-                      "stop-opacity": "1"
-                    }
+                      "stop-opacity": "1",
+                    },
                   }),
                   _vm._v(" "),
                   _c("stop", {
@@ -7845,17 +7909,17 @@
                         _vm.mergedColor[1] || _vm.defaultColor[1],
                         30
                       ),
-                      "stop-opacity": "1"
-                    }
-                  })
+                      "stop-opacity": "1",
+                    },
+                  }),
                 ],
                 1
-              )
+              ),
             ],
             1
           ),
           _vm._v(" "),
-          _vm._l(_vm.circleR, function(r) {
+          _vm._l(_vm.circleR, function (r) {
             return _c("circle", {
               key: r,
               attrs: {
@@ -7864,8 +7928,8 @@
                 cy: _vm.y,
                 stroke: _vm.mergedColor[1],
                 "stroke-width": 0.5,
-                fill: "transparent"
-              }
+                fill: "transparent",
+              },
             })
           }),
           _vm._v(" "),
@@ -7877,8 +7941,8 @@
                 cx: _vm.x,
                 cy: _vm.y,
                 stroke: "transparent",
-                fill: "url(#" + _vm.gradientId + ")"
-              }
+                fill: "url(#" + _vm.gradientId + ")",
+              },
             },
             [
               _c("animate", {
@@ -7886,8 +7950,8 @@
                   attributeName: "r",
                   values: "1;" + _vm.width / 2,
                   dur: _vm.haloDur + "s",
-                  repeatCount: "indefinite"
-                }
+                  repeatCount: "indefinite",
+                },
               }),
               _vm._v(" "),
               _c("animate", {
@@ -7895,43 +7959,43 @@
                   attributeName: "opacity",
                   values: "1;0",
                   dur: _vm.haloDur + "s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ]
           ),
           _vm._v(" "),
           _c("circle", {
-            attrs: { r: "2", cx: _vm.x, cy: _vm.y, fill: _vm.mergedColor[1] }
+            attrs: { r: "2", cx: _vm.x, cy: _vm.y, fill: _vm.mergedColor[1] },
           }),
           _vm._v(" "),
           _vm.showSplitLine
             ? _c(
                 "g",
-                _vm._l(_vm.splitLinePoints, function(p) {
+                _vm._l(_vm.splitLinePoints, function (p) {
                   return _c("polyline", {
                     key: p,
                     attrs: {
                       points: p,
                       stroke: _vm.mergedColor[1],
                       "stroke-width": 0.5,
-                      opacity: "0.5"
-                    }
+                      opacity: "0.5",
+                    },
                   })
                 }),
                 0
               )
             : _vm._e(),
           _vm._v(" "),
-          _vm._l(_vm.arcD, function(d) {
+          _vm._l(_vm.arcD, function (d) {
             return _c("path", {
               key: d,
               attrs: {
                 d: d,
                 stroke: _vm.mergedColor[1],
                 "stroke-width": "2",
-                fill: "transparent"
-              }
+                fill: "transparent",
+              },
             })
           }),
           _vm._v(" "),
@@ -7946,17 +8010,17 @@
                   values:
                     "0, " + _vm.x + " " + _vm.y + ";360, " + _vm.x + " " + _vm.y,
                   dur: _vm.scanDur + "s",
-                  repeatCount: "indefinite"
-                }
-              })
+                  repeatCount: "indefinite",
+                },
+              }),
             ],
             1
-          )
+          ),
         ],
         2
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "decoration-content" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "decoration-content" }, [_vm._t("default")], 2),
     ])
   };
   var __vue_staticRenderFns__$q = [];
@@ -7965,7 +8029,7 @@
     /* style */
     const __vue_inject_styles__$q = function (inject) {
       if (!inject) return
-      inject("data-v-70099a0c_0", { source: ".dv-decoration-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-12 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,aAAa;AACf;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","file":"main.vue","sourcesContent":[".dv-decoration-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-12 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"]}, media: undefined });
+      inject("data-v-077698d2_0", { source: ".dv-decoration-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-12 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,aAAa;AACf;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,WAAW;EACX,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","file":"main.vue","sourcesContent":[".dv-decoration-12 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\n.dv-decoration-12 .decoration-content {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -7997,14 +8061,20 @@
     Vue.component(__vue_component__$q.name, __vue_component__$q);
   }
 
+  var classCallCheck = createCommonjsModule(function (module) {
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
       throw new TypeError("Cannot call a class as a function");
     }
   }
 
-  var classCallCheck = _classCallCheck;
+  module.exports = _classCallCheck;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
 
+  unwrapExports(classCallCheck);
+
+  var defineProperty = createCommonjsModule(function (module) {
   function _defineProperty(obj, key, value) {
     if (key in obj) {
       Object.defineProperty(obj, key, {
@@ -8020,7 +8090,11 @@
     return obj;
   }
 
-  var defineProperty = _defineProperty;
+  module.exports = _defineProperty;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
+
+  unwrapExports(defineProperty);
 
   var bezierCurveToPolyline_1 = createCommonjsModule(function (module, exports) {
 
@@ -9521,6 +9595,24 @@
     var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
     var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
 
+    function define(obj, key, value) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+      return obj[key];
+    }
+    try {
+      // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+      define({}, "");
+    } catch (err) {
+      define = function(obj, key, value) {
+        return obj[key] = value;
+      };
+    }
+
     function wrap(innerFn, outerFn, self, tryLocsList) {
       // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
       var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
@@ -9573,9 +9665,9 @@
     // This is a polyfill for %IteratorPrototype% for environments that
     // don't natively support it.
     var IteratorPrototype = {};
-    IteratorPrototype[iteratorSymbol] = function () {
+    define(IteratorPrototype, iteratorSymbol, function () {
       return this;
-    };
+    });
 
     var getProto = Object.getPrototypeOf;
     var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
@@ -9589,18 +9681,22 @@
 
     var Gp = GeneratorFunctionPrototype.prototype =
       Generator.prototype = Object.create(IteratorPrototype);
-    GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-    GeneratorFunctionPrototype.constructor = GeneratorFunction;
-    GeneratorFunctionPrototype[toStringTagSymbol] =
-      GeneratorFunction.displayName = "GeneratorFunction";
+    GeneratorFunction.prototype = GeneratorFunctionPrototype;
+    define(Gp, "constructor", GeneratorFunctionPrototype);
+    define(GeneratorFunctionPrototype, "constructor", GeneratorFunction);
+    GeneratorFunction.displayName = define(
+      GeneratorFunctionPrototype,
+      toStringTagSymbol,
+      "GeneratorFunction"
+    );
 
     // Helper for defining the .next, .throw, and .return methods of the
     // Iterator interface in terms of a single ._invoke method.
     function defineIteratorMethods(prototype) {
       ["next", "throw", "return"].forEach(function(method) {
-        prototype[method] = function(arg) {
+        define(prototype, method, function(arg) {
           return this._invoke(method, arg);
-        };
+        });
       });
     }
 
@@ -9619,9 +9715,7 @@
         Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
       } else {
         genFun.__proto__ = GeneratorFunctionPrototype;
-        if (!(toStringTagSymbol in genFun)) {
-          genFun[toStringTagSymbol] = "GeneratorFunction";
-        }
+        define(genFun, toStringTagSymbol, "GeneratorFunction");
       }
       genFun.prototype = Object.create(Gp);
       return genFun;
@@ -9703,9 +9797,9 @@
     }
 
     defineIteratorMethods(AsyncIterator.prototype);
-    AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
       return this;
-    };
+    });
     exports.AsyncIterator = AsyncIterator;
 
     // Note that simple async functions are implemented on top of
@@ -9891,20 +9985,20 @@
     // unified ._invoke helper method.
     defineIteratorMethods(Gp);
 
-    Gp[toStringTagSymbol] = "Generator";
+    define(Gp, toStringTagSymbol, "Generator");
 
     // A Generator should always return itself as the iterator object when the
     // @@iterator function is called on it. Some browsers' implementations of the
     // iterator prototype chain incorrectly implement this, causing the Generator
     // object to not be returned from this call. This ensures that doesn't happen.
     // See https://github.com/facebook/regenerator/issues/274 for more details.
-    Gp[iteratorSymbol] = function() {
+    define(Gp, iteratorSymbol, function() {
       return this;
-    };
+    });
 
-    Gp.toString = function() {
+    define(Gp, "toString", function() {
       return "[object Generator]";
-    };
+    });
 
     function pushTryEntry(locs) {
       var entry = { tryLoc: locs[0] };
@@ -10223,19 +10317,25 @@
   } catch (accidentalStrictMode) {
     // This module should not be running in strict mode, so the above
     // assignment should always work unless something is misconfigured. Just
-    // in case runtime.js accidentally runs in strict mode, we can escape
+    // in case runtime.js accidentally runs in strict mode, in modern engines
+    // we can explicitly access globalThis. In older engines we can escape
     // strict mode using a global Function call. This could conceivably fail
     // if a Content Security Policy forbids using Function, but in that case
     // the proper solution is to fix the accidental strict mode problem. If
     // you've misconfigured your bundler to force strict mode and applied a
     // CSP to forbid Function, and you're not willing to fix either of those
     // problems, please detail your unique predicament in a GitHub issue.
-    Function("r", "regeneratorRuntime = r")(runtime);
+    if (typeof globalThis === "object") {
+      globalThis.regeneratorRuntime = runtime;
+    } else {
+      Function("r", "regeneratorRuntime = r")(runtime);
+    }
   }
   });
 
   var regenerator = runtime_1;
 
+  var asyncToGenerator = createCommonjsModule(function (module) {
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
     try {
       var info = gen[key](arg);
@@ -10272,7 +10372,11 @@
     };
   }
 
-  var asyncToGenerator = _asyncToGenerator;
+  module.exports = _asyncToGenerator;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  });
+
+  unwrapExports(asyncToGenerator);
 
   var style_class = createCommonjsModule(function (module, exports) {
 
@@ -12161,7 +12265,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   var pie = {
     shape: {
@@ -12317,7 +12421,8 @@
       var textSegments = content.split('{nt}');
       var textString = '';
       textSegments.forEach(function (t, i) {
-        var currentNumber = number[i] || '';
+        var currentNumber = number[i];
+        if (typeof currentNumber !== 'number') currentNumber = '';
 
         if (typeof currentNumber === 'number') {
           currentNumber = currentNumber.toFixed(toFixed);
@@ -12330,7 +12435,7 @@
       graphs_1.text.draw({
         ctx: ctx
       }, {
-        shape: _objectSpread({}, shape, {
+        shape: _objectSpread(_objectSpread({}, shape), {}, {
           content: textString,
           rowGap: rowGap
         })
@@ -14625,14 +14730,13 @@
     radarConfig: radar.radarConfig,
     gaugeConfig: gauge.gaugeConfig,
     legendConfig: legend.legendConfig
-    /**
-     * @description Change default configuration
-     * @param {String} key          Configuration key
-     * @param {Object|Array} config Your config
-     * @return {Undefined} No return
-     */
-
   };
+  /**
+   * @description Change default configuration
+   * @param {String} key          Configuration key
+   * @param {Object|Array} config Your config
+   * @return {Undefined} No return
+   */
 
   function changeDefaultConfig(key, config) {
     if (!allConfig["".concat(key, "Config")]) {
@@ -14985,7 +15089,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   function grid(chart) {
     var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -15077,7 +15181,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   var axisConfig = {
     xAxisConfig: config.xAxisConfig,
@@ -15165,13 +15269,13 @@
     allXAxis.splice(2);
     allYAxis.splice(2);
     allXAxis = allXAxis.map(function (axis, i) {
-      return _objectSpread({}, axis, {
+      return _objectSpread(_objectSpread({}, axis), {}, {
         index: i,
         axis: 'x'
       });
     });
     allYAxis = allYAxis.map(function (axis, i) {
-      return _objectSpread({}, axis, {
+      return _objectSpread(_objectSpread({}, axis), {}, {
         index: i,
         axis: 'y'
       });
@@ -15253,7 +15357,7 @@
       label = label.map(function (l) {
         return parseFloat(l.toFixed(2));
       });
-      return _objectSpread({}, axis, {
+      return _objectSpread(_objectSpread({}, axis), {}, {
         maxValue: label.slice(-1)[0],
         minValue: label[0],
         label: getAfterFormatterLabel(label, formatter)
@@ -15404,7 +15508,7 @@
     return labelAxis.map(function (axis) {
       var data = axis.data,
           formatter = axis.axisLabel.formatter;
-      return _objectSpread({}, axis, {
+      return _objectSpread(_objectSpread({}, axis), {}, {
         label: getAfterFormatterLabel(data, formatter)
       });
     });
@@ -15474,7 +15578,7 @@
         linePosition = [[x, y + h], [x + w, y + h]];
       }
 
-      return _objectSpread({}, axis, {
+      return _objectSpread(_objectSpread({}, axis), {}, {
         linePosition: linePosition
       });
     });
@@ -15509,7 +15613,7 @@
         return [startX, startY + gap * (boundaryGap ? i + 0.5 : i)];
       });
       var tickLinePosition = getTickLinePosition(axis, boundaryGap, position, tickPosition, gap);
-      return _objectSpread({}, axisItem, {
+      return _objectSpread(_objectSpread({}, axisItem), {}, {
         tickPosition: tickPosition,
         tickLinePosition: tickLinePosition,
         tickGap: gap
@@ -15571,7 +15675,7 @@
       if (position === 'bottom' && nameLocation === 'start') plus *= -1;
       if (position === 'right' && nameLocation === 'end') plus *= -1;
       namePosition[index] += plus;
-      return _objectSpread({}, axisItem, {
+      return _objectSpread(_objectSpread({}, axisItem), {}, {
         namePosition: namePosition
       });
     });
@@ -15599,7 +15703,7 @@
         return [(0, _toConsumableArray2["default"])(startPoint), endPoint];
       });
       if (!boundaryGap) splitLinePosition.shift();
-      return _objectSpread({}, axisItem, {
+      return _objectSpread(_objectSpread({}, axisItem), {}, {
         splitLinePosition: splitLinePosition
       });
     });
@@ -15714,7 +15818,7 @@
     style = (0, util$1.deepMerge)(align, style);
     var styles = shapes.map(function (_ref20) {
       var position = _ref20.position;
-      return _objectSpread({}, style, {
+      return _objectSpread(_objectSpread({}, style), {}, {
         graphCenter: position
       });
     });
@@ -15853,7 +15957,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   var polylineToBezierCurve = _bezierCurve["default"].polylineToBezierCurve,
       getBezierCurveLength = _bezierCurve["default"].getBezierCurveLength;
@@ -15911,7 +16015,7 @@
       var lineAxis = getLineAxis(lineItem, axisData);
       var linePosition = getLinePosition(lineData, lineAxis);
       var lineFillBottomPos = getLineFillBottomPos(lineAxis);
-      return _objectSpread({}, lineItem, {
+      return _objectSpread(_objectSpread({}, lineItem), {}, {
         linePosition: linePosition.filter(function (p) {
           return p;
         }),
@@ -16037,7 +16141,7 @@
     var gradientColor = (0, util$1.deepMerge)(fillColor, gradient);
     if (gradientColor.length === 1) gradientColor.push(gradientColor[0]);
     var gradientParams = getGradientParams(lineItem);
-    style = _objectSpread({}, style, {
+    style = _objectSpread(_objectSpread({}, style), {}, {
       stroke: 'rgba(0, 0, 0, 0)'
     });
     return (0, util$1.deepMerge)({
@@ -16369,7 +16473,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   function bar(chart) {
     var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -16635,7 +16739,7 @@
         var barItemsStartPos = barCategoryStartPos + (tickGap - barAllWidthAndGap) / 2;
         return barItemsStartPos + (barIndex + 0.5) * barWidth + barIndex * barGap;
       });
-      return _objectSpread({}, bar, {
+      return _objectSpread(_objectSpread({}, bar), {}, {
         barLabelAxisPos: barLabelAxisPos
       });
     });
@@ -16657,7 +16761,7 @@
       var barValueAxisPos = endPos.map(function (p) {
         return [startPos, p];
       });
-      return _objectSpread({}, bar, {
+      return _objectSpread(_objectSpread({}, bar), {}, {
         barValueAxisPos: barValueAxisPos
       });
     });
@@ -16680,7 +16784,7 @@
         if (typeof d === 'number') return;
         barLabelAxisPos[i] = null;
       });
-      return _objectSpread({}, bar, {
+      return _objectSpread(_objectSpread({}, bar), {}, {
         barLabelAxisPos: barLabelAxisPos.filter(function (p) {
           return p !== null;
         })
@@ -17189,7 +17293,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   function pie(chart) {
     var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -17777,7 +17881,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   function radarAxis(chart) {
     var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -18176,7 +18280,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   function radar(chart) {
     var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -18479,7 +18583,7 @@
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
   function gauge$1(chart) {
     var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -19803,12 +19907,12 @@
   const __vue_script__$r = script$r;
 
   /* template */
-  var __vue_render__$r = function() {
+  var __vue_render__$r = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
     return _c("div", { ref: _vm.ref, staticClass: "dv-charts-container" }, [
-      _c("div", { ref: _vm.chartRef, staticClass: "charts-canvas-container" })
+      _c("div", { ref: _vm.chartRef, staticClass: "charts-canvas-container" }),
     ])
   };
   var __vue_staticRenderFns__$r = [];
@@ -19817,7 +19921,7 @@
     /* style */
     const __vue_inject_styles__$r = function (inject) {
       if (!inject) return
-      inject("data-v-1f446fe6_0", { source: ".dv-charts-container {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-charts-container .charts-canvas-container {\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-charts-container {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-charts-container .charts-canvas-container {\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-0b5f5b43_0", { source: ".dv-charts-container {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-charts-container .charts-canvas-container {\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;AACA;EACE,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-charts-container {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.dv-charts-container .charts-canvas-container {\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -20073,12 +20177,12 @@
   const __vue_script__$s = script$s;
 
   /* template */
-  var __vue_render__$s = function() {
+  var __vue_render__$s = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
     return _c("div", { staticClass: "dv-digital-flop" }, [
-      _c("canvas", { ref: "digital-flop" })
+      _c("canvas", { ref: "digital-flop" }),
     ])
   };
   var __vue_staticRenderFns__$s = [];
@@ -20087,7 +20191,7 @@
     /* style */
     const __vue_inject_styles__$s = function (inject) {
       if (!inject) return
-      inject("data-v-113591fb_0", { source: ".dv-digital-flop canvas {\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-digital-flop canvas {\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
+      inject("data-v-7aeb103a_0", { source: ".dv-digital-flop canvas {\n  width: 100%;\n  height: 100%;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd","file":"main.vue","sourcesContent":[".dv-digital-flop canvas {\n  width: 100%;\n  height: 100%;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -20427,14 +20531,14 @@
   const __vue_script__$t = script$t;
 
   /* template */
-  var __vue_render__$t = function() {
+  var __vue_render__$t = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
     return _c("div", { staticClass: "dv-active-ring-chart" }, [
       _c("div", {
         ref: "active-ring-chart",
-        staticClass: "active-ring-chart-container"
+        staticClass: "active-ring-chart-container",
       }),
       _vm._v(" "),
       _c(
@@ -20444,11 +20548,11 @@
           _c("dv-digital-flop", { attrs: { config: _vm.digitalFlop } }),
           _vm._v(" "),
           _c("div", { staticClass: "active-ring-name", style: _vm.fontSize }, [
-            _vm._v(_vm._s(_vm.ringName))
-          ])
+            _vm._v(_vm._s(_vm.ringName)),
+          ]),
         ],
         1
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$t = [];
@@ -20457,7 +20561,7 @@
     /* style */
     const __vue_inject_styles__$t = function (inject) {
       if (!inject) return
-      inject("data-v-ca8abc0a_0", { source: ".dv-active-ring-chart {\n  position: relative;\n}\n.dv-active-ring-chart .active-ring-chart-container {\n  width: 100%;\n  height: 100%;\n}\n.dv-active-ring-chart .active-ring-info {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-active-ring-chart .active-ring-info .dv-digital-flop {\n  width: 100px;\n  height: 30px;\n}\n.dv-active-ring-chart .active-ring-info .active-ring-name {\n  width: 100px;\n  height: 30px;\n  color: #fff;\n  text-align: center;\n  vertical-align: middle;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;AACpB;AACA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,SAAS;EACT,QAAQ;EACR,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;AACrB;AACA;EACE,YAAY;EACZ,YAAY;AACd;AACA;EACE,YAAY;EACZ,YAAY;EACZ,WAAW;EACX,kBAAkB;EAClB,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;EAChB,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-active-ring-chart {\n  position: relative;\n}\n.dv-active-ring-chart .active-ring-chart-container {\n  width: 100%;\n  height: 100%;\n}\n.dv-active-ring-chart .active-ring-info {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-active-ring-chart .active-ring-info .dv-digital-flop {\n  width: 100px;\n  height: 30px;\n}\n.dv-active-ring-chart .active-ring-info .active-ring-name {\n  width: 100px;\n  height: 30px;\n  color: #fff;\n  text-align: center;\n  vertical-align: middle;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n"]}, media: undefined });
+      inject("data-v-119f80cb_0", { source: ".dv-active-ring-chart {\n  position: relative;\n}\n.dv-active-ring-chart .active-ring-chart-container {\n  width: 100%;\n  height: 100%;\n}\n.dv-active-ring-chart .active-ring-info {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-active-ring-chart .active-ring-info .dv-digital-flop {\n  width: 100px;\n  height: 30px;\n}\n.dv-active-ring-chart .active-ring-info .active-ring-name {\n  width: 100px;\n  height: 30px;\n  color: #fff;\n  text-align: center;\n  vertical-align: middle;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;AACpB;AACA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,SAAS;EACT,QAAQ;EACR,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;AACrB;AACA;EACE,YAAY;EACZ,YAAY;AACd;AACA;EACE,YAAY;EACZ,YAAY;EACZ,WAAW;EACX,kBAAkB;EAClB,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;EAChB,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-active-ring-chart {\n  position: relative;\n}\n.dv-active-ring-chart .active-ring-chart-container {\n  width: 100%;\n  height: 100%;\n}\n.dv-active-ring-chart .active-ring-info {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0px;\n  top: 0px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.dv-active-ring-chart .active-ring-info .dv-digital-flop {\n  width: 100px;\n  height: 30px;\n}\n.dv-active-ring-chart .active-ring-info .active-ring-name {\n  width: 100px;\n  height: 30px;\n  color: #fff;\n  text-align: center;\n  vertical-align: middle;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -20599,7 +20703,7 @@
   const __vue_script__$u = script$u;
 
   /* template */
-  var __vue_render__$u = function() {
+  var __vue_render__$u = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -20613,13 +20717,13 @@
                 "div",
                 { staticClass: "label-column" },
                 [
-                  _vm._l(_vm.mergedConfig.data, function(item) {
+                  _vm._l(_vm.mergedConfig.data, function (item) {
                     return _c("div", { key: item.name }, [
-                      _vm._v(_vm._s(item.name))
+                      _vm._v(_vm._s(item.name)),
                     ])
                   }),
                   _vm._v(" "),
-                  _c("div", [_vm._v(" ")])
+                  _c("div", [_vm._v(" ")]),
                 ],
                 2
               ),
@@ -20628,7 +20732,7 @@
                 "div",
                 { staticClass: "capsule-container" },
                 [
-                  _vm._l(_vm.capsuleLength, function(capsule, index) {
+                  _vm._l(_vm.capsuleLength, function (capsule, index) {
                     return _c(
                       "div",
                       { key: index, staticClass: "capsule-item" },
@@ -20644,16 +20748,16 @@
                               _vm.mergedConfig.colors[
                                 index % _vm.mergedConfig.colors.length
                               ] +
-                              ";"
+                              ";",
                           },
                           [
                             _vm.mergedConfig.showValue
                               ? _c("div", { staticClass: "capsule-item-value" }, [
-                                  _vm._v(_vm._s(_vm.capsuleValue[index]))
+                                  _vm._v(_vm._s(_vm.capsuleValue[index])),
                                 ])
-                              : _vm._e()
+                              : _vm._e(),
                           ]
-                        )
+                        ),
                       ]
                     )
                   }),
@@ -20661,24 +20765,24 @@
                   _c(
                     "div",
                     { staticClass: "unit-label" },
-                    _vm._l(_vm.labelData, function(label, index) {
+                    _vm._l(_vm.labelData, function (label, index) {
                       return _c("div", { key: label + index }, [
-                        _vm._v(_vm._s(label))
+                        _vm._v(_vm._s(label)),
                       ])
                     }),
                     0
-                  )
+                  ),
                 ],
                 2
               ),
               _vm._v(" "),
               _vm.mergedConfig.unit
                 ? _c("div", { staticClass: "unit-text" }, [
-                    _vm._v(_vm._s(_vm.mergedConfig.unit))
+                    _vm._v(_vm._s(_vm.mergedConfig.unit)),
                   ])
-                : _vm._e()
+                : _vm._e(),
             ]
-          : _vm._e()
+          : _vm._e(),
       ],
       2
     )
@@ -20689,7 +20793,7 @@
     /* style */
     const __vue_inject_styles__$u = function (inject) {
       if (!inject) return
-      inject("data-v-6f678c1a_0", { source: ".dv-capsule-chart {\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  box-sizing: border-box;\n  padding: 10px;\n  color: #fff;\n}\n.dv-capsule-chart .label-column {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-sizing: border-box;\n  padding-right: 10px;\n  text-align: right;\n  font-size: 12px;\n}\n.dv-capsule-chart .label-column div {\n  height: 20px;\n  line-height: 20px;\n}\n.dv-capsule-chart .capsule-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dv-capsule-chart .capsule-item {\n  box-shadow: 0 0 3px #999;\n  height: 10px;\n  margin: 5px 0px;\n  border-radius: 5px;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column {\n  position: relative;\n  height: 8px;\n  margin-top: 1px;\n  border-radius: 5px;\n  transition: all 0.3s;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column .capsule-item-value {\n  font-size: 12px;\n  transform: translateX(100%);\n}\n.dv-capsule-chart .unit-label {\n  height: 20px;\n  font-size: 12px;\n  position: relative;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.dv-capsule-chart .unit-text {\n  text-align: right;\n  display: flex;\n  align-items: flex-end;\n  font-size: 12px;\n  line-height: 20px;\n  margin-left: 10px;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,sBAAsB;EACtB,aAAa;EACb,WAAW;AACb;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,sBAAsB;EACtB,mBAAmB;EACnB,iBAAiB;EACjB,eAAe;AACjB;AACA;EACE,YAAY;EACZ,iBAAiB;AACnB;AACA;EACE,OAAO;EACP,aAAa;EACb,sBAAsB;EACtB,8BAA8B;AAChC;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,eAAe;EACf,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;EACzB,mBAAmB;AACrB;AACA;EACE,eAAe;EACf,2BAA2B;AAC7B;AACA;EACE,YAAY;EACZ,eAAe;EACf,kBAAkB;EAClB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;AACA;EACE,iBAAiB;EACjB,aAAa;EACb,qBAAqB;EACrB,eAAe;EACf,iBAAiB;EACjB,iBAAiB;AACnB","file":"main.vue","sourcesContent":[".dv-capsule-chart {\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  box-sizing: border-box;\n  padding: 10px;\n  color: #fff;\n}\n.dv-capsule-chart .label-column {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-sizing: border-box;\n  padding-right: 10px;\n  text-align: right;\n  font-size: 12px;\n}\n.dv-capsule-chart .label-column div {\n  height: 20px;\n  line-height: 20px;\n}\n.dv-capsule-chart .capsule-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dv-capsule-chart .capsule-item {\n  box-shadow: 0 0 3px #999;\n  height: 10px;\n  margin: 5px 0px;\n  border-radius: 5px;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column {\n  position: relative;\n  height: 8px;\n  margin-top: 1px;\n  border-radius: 5px;\n  transition: all 0.3s;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column .capsule-item-value {\n  font-size: 12px;\n  transform: translateX(100%);\n}\n.dv-capsule-chart .unit-label {\n  height: 20px;\n  font-size: 12px;\n  position: relative;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.dv-capsule-chart .unit-text {\n  text-align: right;\n  display: flex;\n  align-items: flex-end;\n  font-size: 12px;\n  line-height: 20px;\n  margin-left: 10px;\n}\n"]}, media: undefined });
+      inject("data-v-cd0de26a_0", { source: ".dv-capsule-chart {\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  box-sizing: border-box;\n  padding: 10px;\n  color: #fff;\n}\n.dv-capsule-chart .label-column {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-sizing: border-box;\n  padding-right: 10px;\n  text-align: right;\n  font-size: 12px;\n}\n.dv-capsule-chart .label-column div {\n  height: 20px;\n  line-height: 20px;\n}\n.dv-capsule-chart .capsule-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dv-capsule-chart .capsule-item {\n  box-shadow: 0 0 3px #999;\n  height: 10px;\n  margin: 5px 0px;\n  border-radius: 5px;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column {\n  position: relative;\n  height: 8px;\n  margin-top: 1px;\n  border-radius: 5px;\n  transition: all 0.3s;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column .capsule-item-value {\n  font-size: 12px;\n  transform: translateX(100%);\n}\n.dv-capsule-chart .unit-label {\n  height: 20px;\n  font-size: 12px;\n  position: relative;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.dv-capsule-chart .unit-text {\n  text-align: right;\n  display: flex;\n  align-items: flex-end;\n  font-size: 12px;\n  line-height: 20px;\n  margin-left: 10px;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,sBAAsB;EACtB,aAAa;EACb,WAAW;AACb;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,sBAAsB;EACtB,mBAAmB;EACnB,iBAAiB;EACjB,eAAe;AACjB;AACA;EACE,YAAY;EACZ,iBAAiB;AACnB;AACA;EACE,OAAO;EACP,aAAa;EACb,sBAAsB;EACtB,8BAA8B;AAChC;AACA;EACE,wBAAwB;EACxB,YAAY;EACZ,eAAe;EACf,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,oBAAoB;EACpB,aAAa;EACb,yBAAyB;EACzB,mBAAmB;AACrB;AACA;EACE,eAAe;EACf,2BAA2B;AAC7B;AACA;EACE,YAAY;EACZ,eAAe;EACf,kBAAkB;EAClB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;AACA;EACE,iBAAiB;EACjB,aAAa;EACb,qBAAqB;EACrB,eAAe;EACf,iBAAiB;EACjB,iBAAiB;AACnB","file":"main.vue","sourcesContent":[".dv-capsule-chart {\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  box-sizing: border-box;\n  padding: 10px;\n  color: #fff;\n}\n.dv-capsule-chart .label-column {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-sizing: border-box;\n  padding-right: 10px;\n  text-align: right;\n  font-size: 12px;\n}\n.dv-capsule-chart .label-column div {\n  height: 20px;\n  line-height: 20px;\n}\n.dv-capsule-chart .capsule-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.dv-capsule-chart .capsule-item {\n  box-shadow: 0 0 3px #999;\n  height: 10px;\n  margin: 5px 0px;\n  border-radius: 5px;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column {\n  position: relative;\n  height: 8px;\n  margin-top: 1px;\n  border-radius: 5px;\n  transition: all 0.3s;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.dv-capsule-chart .capsule-item .capsule-item-column .capsule-item-value {\n  font-size: 12px;\n  transform: translateX(100%);\n}\n.dv-capsule-chart .unit-label {\n  height: 20px;\n  font-size: 12px;\n  position: relative;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.dv-capsule-chart .unit-text {\n  text-align: right;\n  display: flex;\n  align-items: flex-end;\n  font-size: 12px;\n  line-height: 20px;\n  margin-left: 10px;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -21024,7 +21128,7 @@
   const __vue_script__$v = script$v;
 
   /* template */
-  var __vue_render__$v = function() {
+  var __vue_render__$v = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -21042,17 +21146,17 @@
                       x1: "0%",
                       y1: "0%",
                       x2: "0%",
-                      y2: "100%"
-                    }
+                      y2: "100%",
+                    },
                   },
-                  _vm._l(_vm.svgBorderGradient, function(lc) {
+                  _vm._l(_vm.svgBorderGradient, function (lc) {
                     return _c("stop", {
                       key: lc[0],
-                      attrs: { offset: lc[0], "stop-color": lc[1] }
+                      attrs: { offset: lc[0], "stop-color": lc[1] },
                     })
                   }),
                   1
-                )
+                ),
               ],
               1
             ),
@@ -21065,8 +21169,8 @@
                       stroke: "url(#" + _vm.gradientId + ")",
                       fill: "url(#" + _vm.gradientId + ")",
                       x: _vm.renderer.area[0] / 2 + 8,
-                      y: _vm.renderer.area[1] / 2 + 8
-                    }
+                      y: _vm.renderer.area[1] / 2 + 8,
+                    },
                   },
                   [_vm._v("\n      " + _vm._s(_vm.details) + "\n    ")]
                 )
@@ -21079,8 +21183,8 @@
                     cy: _vm.renderer.area[1] / 2 + 8,
                     rx: _vm.renderer.area[0] / 2 + 5,
                     ry: _vm.renderer.area[1] / 2 + 5,
-                    stroke: "url(#" + _vm.gradientId + ")"
-                  }
+                    stroke: "url(#" + _vm.gradientId + ")",
+                  },
                 })
               : _c("rect", {
                   attrs: {
@@ -21090,16 +21194,16 @@
                     ry: _vm.shape === "roundRect" ? 10 : 0,
                     width: _vm.renderer.area[0] + 12,
                     height: _vm.renderer.area[1] + 12,
-                    stroke: "url(#" + _vm.gradientId + ")"
-                  }
-                })
+                    stroke: "url(#" + _vm.gradientId + ")",
+                  },
+                }),
           ])
         : _vm._e(),
       _vm._v(" "),
       _c("canvas", {
         ref: "water-pond-level",
-        style: "border-radius: " + _vm.radius + ";"
-      })
+        style: "border-radius: " + _vm.radius + ";",
+      }),
     ])
   };
   var __vue_staticRenderFns__$v = [];
@@ -21108,7 +21212,7 @@
     /* style */
     const __vue_inject_styles__$v = function (inject) {
       if (!inject) return
-      inject("data-v-be672a2c_0", { source: ".dv-water-pond-level {\n  position: relative;\n}\n.dv-water-pond-level svg {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-water-pond-level text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n.dv-water-pond-level ellipse,\n.dv-water-pond-level rect {\n  fill: none;\n  stroke-width: 3;\n}\n.dv-water-pond-level canvas {\n  margin-top: 8px;\n  margin-left: 8px;\n  width: calc(100% - 16px);\n  height: calc(100% - 16px);\n  box-sizing: border-box;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,yBAAyB;AAC3B;AACA;;EAEE,UAAU;EACV,eAAe;AACjB;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,wBAAwB;EACxB,yBAAyB;EACzB,sBAAsB;AACxB","file":"main.vue","sourcesContent":[".dv-water-pond-level {\n  position: relative;\n}\n.dv-water-pond-level svg {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-water-pond-level text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n.dv-water-pond-level ellipse,\n.dv-water-pond-level rect {\n  fill: none;\n  stroke-width: 3;\n}\n.dv-water-pond-level canvas {\n  margin-top: 8px;\n  margin-left: 8px;\n  width: calc(100% - 16px);\n  height: calc(100% - 16px);\n  box-sizing: border-box;\n}\n"]}, media: undefined });
+      inject("data-v-5938bb82_0", { source: ".dv-water-pond-level {\n  position: relative;\n}\n.dv-water-pond-level svg {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-water-pond-level text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n.dv-water-pond-level ellipse,\n.dv-water-pond-level rect {\n  fill: none;\n  stroke-width: 3;\n}\n.dv-water-pond-level canvas {\n  margin-top: 8px;\n  margin-left: 8px;\n  width: calc(100% - 16px);\n  height: calc(100% - 16px);\n  box-sizing: border-box;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,QAAQ;EACR,SAAS;AACX;AACA;EACE,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,yBAAyB;AAC3B;AACA;;EAEE,UAAU;EACV,eAAe;AACjB;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,wBAAwB;EACxB,yBAAyB;EACzB,sBAAsB;AACxB","file":"main.vue","sourcesContent":[".dv-water-pond-level {\n  position: relative;\n}\n.dv-water-pond-level svg {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n}\n.dv-water-pond-level text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n.dv-water-pond-level ellipse,\n.dv-water-pond-level rect {\n  fill: none;\n  stroke-width: 3;\n}\n.dv-water-pond-level canvas {\n  margin-top: 8px;\n  margin-left: 8px;\n  width: calc(100% - 16px);\n  height: calc(100% - 16px);\n  box-sizing: border-box;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -21391,7 +21495,7 @@
   const __vue_script__$w = script$w;
 
   /* template */
-  var __vue_render__$w = function() {
+  var __vue_render__$w = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -21408,13 +21512,13 @@
                   x1: "0%",
                   y1: "0%",
                   x2: "100%",
-                  y2: "0%"
-                }
+                  y2: "0%",
+                },
               },
-              _vm._l(_vm.linearGradient, function(lc) {
+              _vm._l(_vm.linearGradient, function (lc) {
                 return _c("stop", {
                   key: lc[0],
-                  attrs: { offset: lc[0] + "%", "stop-color": lc[1] }
+                  attrs: { offset: lc[0] + "%", "stop-color": lc[1] },
                 })
               }),
               1
@@ -21428,17 +21532,17 @@
                   x1: "0%",
                   y1: "0%",
                   x2: _vm.gradient2XPos,
-                  y2: "0%"
-                }
+                  y2: "0%",
+                },
               },
-              _vm._l(_vm.linearGradient, function(lc) {
+              _vm._l(_vm.linearGradient, function (lc) {
                 return _c("stop", {
                   key: lc[0],
-                  attrs: { offset: lc[0] + "%", "stop-color": lc[1] }
+                  attrs: { offset: lc[0] + "%", "stop-color": lc[1] },
                 })
               }),
               1
-            )
+            ),
           ],
           1
         ),
@@ -21453,8 +21557,8 @@
             "stroke-width": _vm.mergedConfig ? _vm.mergedConfig.borderWidth : "0",
             stroke: "url(#" + _vm.gradientId1 + ")",
             width: _vm.rectWidth > 0 ? _vm.rectWidth : 0,
-            height: _vm.rectHeight > 0 ? _vm.rectHeight : 0
-          }
+            height: _vm.rectHeight > 0 ? _vm.rectHeight : 0,
+          },
         }),
         _vm._v(" "),
         _c("polyline", {
@@ -21464,8 +21568,8 @@
               ? _vm.mergedConfig.lineDash.join(",")
               : "0",
             stroke: "url(#" + _vm.polylineGradient + ")",
-            points: _vm.points
-          }
+            points: _vm.points,
+          },
         }),
         _vm._v(" "),
         _c(
@@ -21475,12 +21579,12 @@
               stroke: _vm.mergedConfig ? _vm.mergedConfig.textColor : "#fff",
               fill: _vm.mergedConfig ? _vm.mergedConfig.textColor : "#fff",
               x: _vm.width / 2,
-              y: _vm.height / 2
-            }
+              y: _vm.height / 2,
+            },
           },
           [_vm._v("\n      " + _vm._s(_vm.details) + "\n    ")]
-        )
-      ])
+        ),
+      ]),
     ])
   };
   var __vue_staticRenderFns__$w = [];
@@ -21489,7 +21593,7 @@
     /* style */
     const __vue_inject_styles__$w = function (inject) {
       if (!inject) return
-      inject("data-v-05a0166f_0", { source: ".dv-percent-pond {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n.dv-percent-pond svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-percent-pond polyline {\n  transition: all 0.3s;\n}\n.dv-percent-pond text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,aAAa;EACb,sBAAsB;AACxB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,WAAW;EACX,YAAY;AACd;AACA;EACE,oBAAoB;AACtB;AACA;EACE,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,yBAAyB;AAC3B","file":"main.vue","sourcesContent":[".dv-percent-pond {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n.dv-percent-pond svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-percent-pond polyline {\n  transition: all 0.3s;\n}\n.dv-percent-pond text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n"]}, media: undefined });
+      inject("data-v-021ed047_0", { source: ".dv-percent-pond {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n.dv-percent-pond svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-percent-pond polyline {\n  transition: all 0.3s;\n}\n.dv-percent-pond text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,aAAa;EACb,sBAAsB;AACxB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,WAAW;EACX,YAAY;AACd;AACA;EACE,oBAAoB;AACtB;AACA;EACE,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,yBAAyB;AAC3B","file":"main.vue","sourcesContent":[".dv-percent-pond {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n.dv-percent-pond svg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  width: 100%;\n  height: 100%;\n}\n.dv-percent-pond polyline {\n  transition: all 0.3s;\n}\n.dv-percent-pond text {\n  font-size: 25px;\n  font-weight: bold;\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -21923,7 +22027,7 @@
   const __vue_script__$x = script$x;
 
   /* template */
-  var __vue_render__$x = function() {
+  var __vue_render__$x = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -21936,7 +22040,7 @@
           "background-image: url(" +
           (_vm.mergedConfig ? _vm.mergedConfig.bgImgUrl : "") +
           ")",
-        on: { click: _vm.consoleClickPos }
+        on: { click: _vm.consoleClickPos },
       },
       [
         _vm.mergedConfig
@@ -21954,25 +22058,25 @@
                           id: _vm.gradientId,
                           cx: "50%",
                           cy: "50%",
-                          r: "50%"
-                        }
+                          r: "50%",
+                        },
                       },
                       [
                         _c("stop", {
                           attrs: {
                             offset: "0%",
                             "stop-color": "#fff",
-                            "stop-opacity": "1"
-                          }
+                            "stop-opacity": "1",
+                          },
                         }),
                         _vm._v(" "),
                         _c("stop", {
                           attrs: {
                             offset: "100%",
                             "stop-color": "#fff",
-                            "stop-opacity": "0"
-                          }
-                        })
+                            "stop-opacity": "0",
+                          },
+                        }),
                       ],
                       1
                     ),
@@ -21984,25 +22088,25 @@
                           id: _vm.gradient2Id,
                           cx: "50%",
                           cy: "50%",
-                          r: "50%"
-                        }
+                          r: "50%",
+                        },
                       },
                       [
                         _c("stop", {
                           attrs: {
                             offset: "0%",
                             "stop-color": "#fff",
-                            "stop-opacity": "0"
-                          }
+                            "stop-opacity": "0",
+                          },
                         }),
                         _vm._v(" "),
                         _c("stop", {
                           attrs: {
                             offset: "100%",
                             "stop-color": "#fff",
-                            "stop-opacity": "1"
-                          }
-                        })
+                            "stop-opacity": "1",
+                          },
+                        }),
                       ],
                       1
                     ),
@@ -22014,8 +22118,8 @@
                             attrs: {
                               id: "circle" + _vm.paths[0].toString(),
                               cx: _vm.paths[0][2][0],
-                              cy: _vm.paths[0][2][1]
-                            }
+                              cy: _vm.paths[0][2][1],
+                            },
                           },
                           [
                             _c("animate", {
@@ -22023,8 +22127,8 @@
                                 attributeName: "r",
                                 values: "1;" + _vm.mergedConfig.halo.radius,
                                 dur: _vm.mergedConfig.halo.duration / 10 + "s",
-                                repeatCount: "indefinite"
-                              }
+                                repeatCount: "indefinite",
+                              },
                             }),
                             _vm._v(" "),
                             _c("animate", {
@@ -22032,12 +22136,12 @@
                                 attributeName: "opacity",
                                 values: "1;0",
                                 dur: _vm.mergedConfig.halo.duration / 10 + "s",
-                                repeatCount: "indefinite"
-                              }
-                            })
+                                repeatCount: "indefinite",
+                              },
+                            }),
                           ]
                         )
-                      : _vm._e()
+                      : _vm._e(),
                   ],
                   1
                 ),
@@ -22053,8 +22157,8 @@
                           _vm.mergedConfig.centerPointImg.width / 2,
                         y:
                           _vm.paths[0][2][1] -
-                          _vm.mergedConfig.centerPointImg.height / 2
-                      }
+                          _vm.mergedConfig.centerPointImg.height / 2,
+                      },
                     })
                   : _vm._e(),
                 _vm._v(" "),
@@ -22066,10 +22170,10 @@
                       ? _c("use", {
                           attrs: {
                             "xlink:href": "#circle" + _vm.paths[0].toString(),
-                            fill: "url(#" + _vm.gradient2Id + ")"
-                          }
+                            fill: "url(#" + _vm.gradient2Id + ")",
+                          },
                         })
-                      : _vm._e()
+                      : _vm._e(),
                   ]
                 ),
                 _vm._v(" "),
@@ -22078,12 +22182,12 @@
                       attrs: {
                         "xlink:href": "#circle" + _vm.paths[0].toString(),
                         fill: _vm.mergedConfig.halo.color,
-                        mask: "url(#maskhalo" + _vm.paths[0].toString() + ")"
-                      }
+                        mask: "url(#maskhalo" + _vm.paths[0].toString() + ")",
+                      },
                     })
                   : _vm._e(),
                 _vm._v(" "),
-                _vm._l(_vm.paths, function(path, i) {
+                _vm._l(_vm.paths, function (path, i) {
                   return _c("g", { key: i }, [
                     _c("defs", [
                       _c("path", {
@@ -22098,17 +22202,17 @@
                             path[1].toString() +
                             " " +
                             path[2].toString(),
-                          fill: "transparent"
-                        }
-                      })
+                          fill: "transparent",
+                        },
+                      }),
                     ]),
                     _vm._v(" "),
                     _c("use", {
                       attrs: {
                         "xlink:href": "#path" + path.toString(),
                         "stroke-width": _vm.mergedConfig.lineWidth,
-                        stroke: _vm.mergedConfig.orbitColor
-                      }
+                        stroke: _vm.mergedConfig.orbitColor,
+                      },
                     }),
                     _vm._v(" "),
                     _vm.lengths[i]
@@ -22120,8 +22224,8 @@
                               "stroke-width": _vm.mergedConfig.lineWidth,
                               stroke: _vm.mergedConfig.flylineColor,
                               mask:
-                                "url(#mask" + _vm.unique + path.toString() + ")"
-                            }
+                                "url(#mask" + _vm.unique + path.toString() + ")",
+                            },
                           },
                           [
                             _c("animate", {
@@ -22130,9 +22234,9 @@
                                 from: "0, " + _vm.lengths[i],
                                 to: _vm.lengths[i] + ", 0",
                                 dur: _vm.times[i] || 0,
-                                repeatCount: "indefinite"
-                              }
-                            })
+                                repeatCount: "indefinite",
+                              },
+                            }),
                           ]
                         )
                       : _vm._e(),
@@ -22148,8 +22252,8 @@
                               cx: "0",
                               cy: "0",
                               r: _vm.mergedConfig.flylineRadius,
-                              fill: "url(#" + _vm.gradientId + ")"
-                            }
+                              fill: "url(#" + _vm.gradientId + ")",
+                            },
                           },
                           [
                             _c("animateMotion", {
@@ -22163,12 +22267,12 @@
                                   " " +
                                   path[2].toString(),
                                 rotate: "auto",
-                                repeatCount: "indefinite"
-                              }
-                            })
+                                repeatCount: "indefinite",
+                              },
+                            }),
                           ],
                           1
-                        )
+                        ),
                       ]
                     ),
                     _vm._v(" "),
@@ -22178,8 +22282,8 @@
                         width: _vm.mergedConfig.pointsImg.width,
                         height: _vm.mergedConfig.pointsImg.height,
                         x: path[0][0] - _vm.mergedConfig.pointsImg.width / 2,
-                        y: path[0][1] - _vm.mergedConfig.pointsImg.height / 2
-                      }
+                        y: path[0][1] - _vm.mergedConfig.pointsImg.height / 2,
+                      },
                     }),
                     _vm._v(" "),
                     _c(
@@ -22190,17 +22294,17 @@
                         attrs: {
                           fill: _vm.mergedConfig.text.color,
                           x: path[0][0] + _vm.mergedConfig.text.offset[0],
-                          y: path[0][1] + _vm.mergedConfig.text.offset[1]
-                        }
+                          y: path[0][1] + _vm.mergedConfig.text.offset[1],
+                        },
                       },
                       [_vm._v("\n        " + _vm._s(_vm.texts[i]) + "\n      ")]
-                    )
+                    ),
                   ])
-                })
+                }),
               ],
               2
             )
-          : _vm._e()
+          : _vm._e(),
       ]
     )
   };
@@ -22210,7 +22314,7 @@
     /* style */
     const __vue_inject_styles__$x = function (inject) {
       if (!inject) return
-      inject("data-v-1edfcf29_0", { source: ".dv-flyline-chart {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart polyline {\n  transition: all 0.3s;\n}\n.dv-flyline-chart text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,0BAA0B;AAC5B;AACA;EACE,oBAAoB;AACtB;AACA;EACE,mBAAmB;EACnB,yBAAyB;AAC3B","file":"main.vue","sourcesContent":[".dv-flyline-chart {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart polyline {\n  transition: all 0.3s;\n}\n.dv-flyline-chart text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n"]}, media: undefined });
+      inject("data-v-1bbb248e_0", { source: ".dv-flyline-chart {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart polyline {\n  transition: all 0.3s;\n}\n.dv-flyline-chart text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,0BAA0B;AAC5B;AACA;EACE,oBAAoB;AACtB;AACA;EACE,mBAAmB;EACnB,yBAAyB;AAC3B","file":"main.vue","sourcesContent":[".dv-flyline-chart {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart polyline {\n  transition: all 0.3s;\n}\n.dv-flyline-chart text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -22728,7 +22832,7 @@
   const __vue_script__$y = script$y;
 
   /* template */
-  var __vue_render__$y = function() {
+  var __vue_render__$y = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -22741,7 +22845,7 @@
           "background-image: url(" +
           (_vm.mergedConfig ? _vm.mergedConfig.bgImgSrc : "") +
           ")",
-        on: { click: _vm.consoleClickPos }
+        on: { click: _vm.consoleClickPos },
       },
       [
         _vm.flylines.length
@@ -22759,25 +22863,25 @@
                           id: _vm.flylineGradientId,
                           cx: "50%",
                           cy: "50%",
-                          r: "50%"
-                        }
+                          r: "50%",
+                        },
                       },
                       [
                         _c("stop", {
                           attrs: {
                             offset: "0%",
                             "stop-color": "#fff",
-                            "stop-opacity": "1"
-                          }
+                            "stop-opacity": "1",
+                          },
                         }),
                         _vm._v(" "),
                         _c("stop", {
                           attrs: {
                             offset: "100%",
                             "stop-color": "#fff",
-                            "stop-opacity": "0"
-                          }
-                        })
+                            "stop-opacity": "0",
+                          },
+                        }),
                       ],
                       1
                     ),
@@ -22789,33 +22893,33 @@
                           id: _vm.haloGradientId,
                           cx: "50%",
                           cy: "50%",
-                          r: "50%"
-                        }
+                          r: "50%",
+                        },
                       },
                       [
                         _c("stop", {
                           attrs: {
                             offset: "0%",
                             "stop-color": "#fff",
-                            "stop-opacity": "0"
-                          }
+                            "stop-opacity": "0",
+                          },
                         }),
                         _vm._v(" "),
                         _c("stop", {
                           attrs: {
                             offset: "100%",
                             "stop-color": "#fff",
-                            "stop-opacity": "1"
-                          }
-                        })
+                            "stop-opacity": "1",
+                          },
+                        }),
                       ],
                       1
-                    )
+                    ),
                   ],
                   1
                 ),
                 _vm._v(" "),
-                _vm._l(_vm.flylinePoints, function(point) {
+                _vm._l(_vm.flylinePoints, function (point) {
                   return _c("g", { key: point.key + Math.random() }, [
                     _c("defs", [
                       point.halo.show
@@ -22825,8 +22929,8 @@
                               attrs: {
                                 id: "halo" + _vm.unique + point.key,
                                 cx: point.coordinate[0],
-                                cy: point.coordinate[1]
-                              }
+                                cy: point.coordinate[1],
+                              },
                             },
                             [
                               _c("animate", {
@@ -22834,8 +22938,8 @@
                                   attributeName: "r",
                                   values: "1;" + point.halo.radius,
                                   dur: point.halo.time + "s",
-                                  repeatCount: "indefinite"
-                                }
+                                  repeatCount: "indefinite",
+                                },
                               }),
                               _vm._v(" "),
                               _c("animate", {
@@ -22843,12 +22947,12 @@
                                   attributeName: "opacity",
                                   values: "1;0",
                                   dur: point.halo.time + "s",
-                                  repeatCount: "indefinite"
-                                }
-                              })
+                                  repeatCount: "indefinite",
+                                },
+                              }),
                             ]
                           )
-                        : _vm._e()
+                        : _vm._e(),
                     ]),
                     _vm._v(" "),
                     _c(
@@ -22859,10 +22963,10 @@
                           ? _c("use", {
                               attrs: {
                                 "xlink:href": "#halo" + _vm.unique + point.key,
-                                fill: "url(#" + _vm.haloGradientId + ")"
-                              }
+                                fill: "url(#" + _vm.haloGradientId + ")",
+                              },
                             })
-                          : _vm._e()
+                          : _vm._e(),
                       ]
                     ),
                     _vm._v(" "),
@@ -22871,8 +22975,8 @@
                           attrs: {
                             "xlink:href": "#halo" + _vm.unique + point.key,
                             fill: point.halo.color,
-                            mask: "url(#mask" + _vm.unique + point.key + ")"
-                          }
+                            mask: "url(#mask" + _vm.unique + point.key + ")",
+                          },
                         })
                       : _vm._e(),
                     _vm._v(" "),
@@ -22883,8 +22987,8 @@
                             width: point.icon.width,
                             height: point.icon.height,
                             x: point.icon.x,
-                            y: point.icon.y
-                          }
+                            y: point.icon.y,
+                          },
                         })
                       : _vm._e(),
                     _vm._v(" "),
@@ -22900,31 +23004,31 @@
                             attrs: {
                               fill: point.text.color,
                               x: point.text.x,
-                              y: point.text.y
-                            }
+                              y: point.text.y,
+                            },
                           },
                           [_vm._v("\n        " + _vm._s(point.name) + "\n      ")]
                         )
-                      : _vm._e()
+                      : _vm._e(),
                   ])
                 }),
                 _vm._v(" "),
-                _vm._l(_vm.flylines, function(line, i) {
+                _vm._l(_vm.flylines, function (line, i) {
                   return _c("g", { key: line.key + Math.random() }, [
                     _c("defs", [
                       _c("path", {
                         ref: line.key,
                         refInFor: true,
-                        attrs: { id: line.key, d: line.d, fill: "transparent" }
-                      })
+                        attrs: { id: line.key, d: line.d, fill: "transparent" },
+                      }),
                     ]),
                     _vm._v(" "),
                     _c("use", {
                       attrs: {
                         "xlink:href": "#" + line.key,
                         "stroke-width": line.width,
-                        stroke: line.orbitColor
-                      }
+                        stroke: line.orbitColor,
+                      },
                     }),
                     _vm._v(" "),
                     _c(
@@ -22938,8 +23042,8 @@
                               cx: "0",
                               cy: "0",
                               r: line.radius,
-                              fill: "url(#" + _vm.flylineGradientId + ")"
-                            }
+                              fill: "url(#" + _vm.flylineGradientId + ")",
+                            },
                           },
                           [
                             _c("animateMotion", {
@@ -22947,12 +23051,12 @@
                                 dur: line.time,
                                 path: line.d,
                                 rotate: "auto",
-                                repeatCount: "indefinite"
-                              }
-                            })
+                                repeatCount: "indefinite",
+                              },
+                            }),
                           ],
                           1
-                        )
+                        ),
                       ]
                     ),
                     _vm._v(" "),
@@ -22964,8 +23068,8 @@
                               "xlink:href": "#" + line.key,
                               "stroke-width": line.width,
                               stroke: line.color,
-                              mask: "url(#mask" + _vm.unique + line.key + ")"
-                            }
+                              mask: "url(#mask" + _vm.unique + line.key + ")",
+                            },
                           },
                           [
                             _c("animate", {
@@ -22974,18 +23078,18 @@
                                 from: "0, " + _vm.flylineLengths[i],
                                 to: _vm.flylineLengths[i] + ", 0",
                                 dur: line.time,
-                                repeatCount: "indefinite"
-                              }
-                            })
+                                repeatCount: "indefinite",
+                              },
+                            }),
                           ]
                         )
-                      : _vm._e()
+                      : _vm._e(),
                   ])
-                })
+                }),
               ],
               2
             )
-          : _vm._e()
+          : _vm._e(),
       ]
     )
   };
@@ -22995,7 +23099,7 @@
     /* style */
     const __vue_inject_styles__$y = function (inject) {
       if (!inject) return
-      inject("data-v-a7b8c35c_0", { source: ".dv-flyline-chart-enhanced {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart-enhanced text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,0BAA0B;AAC5B;AACA;EACE,mBAAmB;EACnB,yBAAyB;AAC3B","file":"main.vue","sourcesContent":[".dv-flyline-chart-enhanced {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart-enhanced text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n"]}, media: undefined });
+      inject("data-v-86673078_0", { source: ".dv-flyline-chart-enhanced {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart-enhanced text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,0BAA0B;AAC5B;AACA;EACE,mBAAmB;EACnB,yBAAyB;AAC3B","file":"main.vue","sourcesContent":[".dv-flyline-chart-enhanced {\n  display: flex;\n  flex-direction: column;\n  background-size: 100% 100%;\n}\n.dv-flyline-chart-enhanced text {\n  text-anchor: middle;\n  dominant-baseline: middle;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -23212,7 +23316,7 @@
   const __vue_script__$z = script$z;
 
   /* template */
-  var __vue_render__$z = function() {
+  var __vue_render__$z = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -23220,10 +23324,10 @@
       _c(
         "svg",
         { attrs: { width: _vm.width, height: _vm.height } },
-        _vm._l(_vm.column, function(item, i) {
+        _vm._l(_vm.column, function (item, i) {
           return _c("g", { key: i }, [
             _c("path", {
-              attrs: { d: item.d, fill: _vm.mergedConfig.columnColor }
+              attrs: { d: item.d, fill: _vm.mergedConfig.columnColor },
             }),
             _vm._v(" "),
             _c(
@@ -23233,8 +23337,8 @@
                 attrs: {
                   fill: _vm.mergedConfig.textColor,
                   x: item.x,
-                  y: _vm.height - 4
-                }
+                  y: _vm.height - 4,
+                },
               },
               [_vm._v("\n        " + _vm._s(item.name) + "\n      ")]
             ),
@@ -23247,8 +23351,8 @@
                     width: _vm.mergedConfig.imgSideLength,
                     height: _vm.mergedConfig.imgSideLength,
                     x: item.x - _vm.mergedConfig.imgSideLength / 2,
-                    y: item.y - _vm.mergedConfig.imgSideLength
-                  }
+                    y: item.y - _vm.mergedConfig.imgSideLength,
+                  },
                 })
               : _vm._e(),
             _vm._v(" "),
@@ -23260,16 +23364,16 @@
                     attrs: {
                       fill: _vm.mergedConfig.textColor,
                       x: item.x,
-                      y: item.textY
-                    }
+                      y: item.textY,
+                    },
                   },
                   [_vm._v("\n        " + _vm._s(item.value) + "\n      ")]
                 )
-              : _vm._e()
+              : _vm._e(),
           ])
         }),
         0
-      )
+      ),
     ])
   };
   var __vue_staticRenderFns__$z = [];
@@ -23278,7 +23382,7 @@
     /* style */
     const __vue_inject_styles__$z = function (inject) {
       if (!inject) return
-      inject("data-v-382f06c7_0", { source: ".dv-conical-column-chart {\n  width: 100%;\n  height: 100%;\n}\n.dv-conical-column-chart text {\n  text-anchor: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-conical-column-chart {\n  width: 100%;\n  height: 100%;\n}\n.dv-conical-column-chart text {\n  text-anchor: middle;\n}\n"]}, media: undefined });
+      inject("data-v-8e8bee56_0", { source: ".dv-conical-column-chart {\n  width: 100%;\n  height: 100%;\n}\n.dv-conical-column-chart text {\n  text-anchor: middle;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;AACd;AACA;EACE,mBAAmB;AACrB","file":"main.vue","sourcesContent":[".dv-conical-column-chart {\n  width: 100%;\n  height: 100%;\n}\n.dv-conical-column-chart text {\n  text-anchor: middle;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -23732,7 +23836,7 @@
   const __vue_script__$A = script$A;
 
   /* template */
-  var __vue_render__$A = function() {
+  var __vue_render__$A = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
@@ -23742,9 +23846,9 @@
             "div",
             {
               staticClass: "header",
-              style: "background-color: " + _vm.mergedConfig.headerBGC + ";"
+              style: "background-color: " + _vm.mergedConfig.headerBGC + ";",
             },
-            _vm._l(_vm.header, function(headerItem, i) {
+            _vm._l(_vm.header, function (headerItem, i) {
               return _c("div", {
                 key: "" + headerItem + i,
                 staticClass: "header-item",
@@ -23757,7 +23861,7 @@
                   _vm.widths[i] +
                   "px;\n      ",
                 attrs: { align: _vm.aligns[i] },
-                domProps: { innerHTML: _vm._s(headerItem) }
+                domProps: { innerHTML: _vm._s(headerItem) },
               })
             }),
             0
@@ -23773,9 +23877,9 @@
                 "height: " +
                 (_vm.height -
                   (_vm.header.length ? _vm.mergedConfig.headerHeight : 0)) +
-                "px;"
+                "px;",
             },
-            _vm._l(_vm.rows, function(row, ri) {
+            _vm._l(_vm.rows, function (row, ri) {
               return _c(
                 "div",
                 {
@@ -23790,9 +23894,9 @@
                     _vm.mergedConfig[
                       row.rowIndex % 2 === 0 ? "evenRowBGC" : "oddRowBGC"
                     ] +
-                    ";\n      "
+                    ";\n      ",
                 },
-                _vm._l(row.ceils, function(ceil, ci) {
+                _vm._l(row.ceils, function (ceil, ci) {
                   return _c("div", {
                     key: "" + ceil + ri + ci,
                     staticClass: "ceil",
@@ -23800,16 +23904,16 @@
                     attrs: { align: _vm.aligns[ci] },
                     domProps: { innerHTML: _vm._s(ceil) },
                     on: {
-                      click: function($event) {
+                      click: function ($event) {
                         return _vm.emitEvent("click", ri, ci, row, ceil)
                       },
-                      mouseenter: function($event) {
+                      mouseenter: function ($event) {
                         return _vm.handleHover(true, ri, ci, row, ceil)
                       },
-                      mouseleave: function($event) {
+                      mouseleave: function ($event) {
                         return _vm.handleHover(false)
-                      }
-                    }
+                      },
+                    },
                   })
                 }),
                 0
@@ -23817,7 +23921,7 @@
             }),
             0
           )
-        : _vm._e()
+        : _vm._e(),
     ])
   };
   var __vue_staticRenderFns__$A = [];
@@ -23826,7 +23930,7 @@
     /* style */
     const __vue_inject_styles__$A = function (inject) {
       if (!inject) return
-      inject("data-v-26e19f4c_0", { source: ".dv-scroll-board {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  color: #fff;\n}\n.dv-scroll-board .text {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .header {\n  display: flex;\n  flex-direction: row;\n  font-size: 15px;\n}\n.dv-scroll-board .header .header-item {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows {\n  overflow: hidden;\n}\n.dv-scroll-board .rows .row-item {\n  display: flex;\n  font-size: 14px;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows .ceil {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .rows .index {\n  border-radius: 3px;\n  padding: 0px 3px;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,WAAW;AACb;AACA;EACE,eAAe;EACf,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;AACzB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,eAAe;EACf,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;EACvB,oBAAoB;AACtB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,eAAe;EACf,oBAAoB;AACtB;AACA;EACE,eAAe;EACf,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;AACzB;AACA;EACE,kBAAkB;EAClB,gBAAgB;AAClB","file":"main.vue","sourcesContent":[".dv-scroll-board {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  color: #fff;\n}\n.dv-scroll-board .text {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .header {\n  display: flex;\n  flex-direction: row;\n  font-size: 15px;\n}\n.dv-scroll-board .header .header-item {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows {\n  overflow: hidden;\n}\n.dv-scroll-board .rows .row-item {\n  display: flex;\n  font-size: 14px;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows .ceil {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .rows .index {\n  border-radius: 3px;\n  padding: 0px 3px;\n}\n"]}, media: undefined });
+      inject("data-v-7a33d4da_0", { source: ".dv-scroll-board {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  color: #fff;\n}\n.dv-scroll-board .text {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .header {\n  display: flex;\n  flex-direction: row;\n  font-size: 15px;\n}\n.dv-scroll-board .header .header-item {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows {\n  overflow: hidden;\n}\n.dv-scroll-board .rows .row-item {\n  display: flex;\n  font-size: 14px;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows .ceil {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .rows .index {\n  border-radius: 3px;\n  padding: 0px 3px;\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,WAAW;AACb;AACA;EACE,eAAe;EACf,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;AACzB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,eAAe;EACf,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;EACvB,oBAAoB;AACtB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,eAAe;EACf,oBAAoB;AACtB;AACA;EACE,eAAe;EACf,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,uBAAuB;AACzB;AACA;EACE,kBAAkB;EAClB,gBAAgB;AAClB","file":"main.vue","sourcesContent":[".dv-scroll-board {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  color: #fff;\n}\n.dv-scroll-board .text {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .header {\n  display: flex;\n  flex-direction: row;\n  font-size: 15px;\n}\n.dv-scroll-board .header .header-item {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows {\n  overflow: hidden;\n}\n.dv-scroll-board .rows .row-item {\n  display: flex;\n  font-size: 14px;\n  transition: all 0.3s;\n}\n.dv-scroll-board .rows .ceil {\n  padding: 0 10px;\n  box-sizing: border-box;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.dv-scroll-board .rows .index {\n  border-radius: 3px;\n  padding: 0px 3px;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -24103,30 +24207,30 @@
   const __vue_script__$B = script$B;
 
   /* template */
-  var __vue_render__$B = function() {
+  var __vue_render__$B = function () {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
     return _c(
       "div",
       { ref: _vm.ref, staticClass: "dv-scroll-ranking-board" },
-      _vm._l(_vm.rows, function(item, i) {
+      _vm._l(_vm.rows, function (item, i) {
         return _c(
           "div",
           {
             key: item.toString() + item.scroll,
             staticClass: "row-item",
-            style: "height: " + _vm.heights[i] + "px;"
+            style: "height: " + _vm.heights[i] + "px;",
           },
           [
             _c("div", { staticClass: "ranking-info" }, [
               _c("div", { staticClass: "rank" }, [
-                _vm._v("No." + _vm._s(item.ranking))
+                _vm._v("No." + _vm._s(item.ranking)),
               ]),
               _vm._v(" "),
               _c("div", {
                 staticClass: "info-name",
-                domProps: { innerHTML: _vm._s(item.name) }
+                domProps: { innerHTML: _vm._s(item.name) },
               }),
               _vm._v(" "),
               _c("div", { staticClass: "ranking-value" }, [
@@ -24136,8 +24240,8 @@
                       ? _vm.mergedConfig.valueFormatter(item)
                       : item.value + _vm.mergedConfig.unit
                   )
-                )
-              ])
+                ),
+              ]),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "ranking-column" }, [
@@ -24145,11 +24249,11 @@
                 "div",
                 {
                   staticClass: "inside-column",
-                  style: "width: " + item.percent + "%;"
+                  style: "width: " + item.percent + "%;",
                 },
                 [_c("div", { staticClass: "shine" })]
-              )
-            ])
+              ),
+            ]),
           ]
         )
       }),
@@ -24162,7 +24266,7 @@
     /* style */
     const __vue_inject_styles__$B = function (inject) {
       if (!inject) return
-      inject("data-v-f297519a_0", { source: ".dv-scroll-ranking-board {\n  width: 100%;\n  height: 100%;\n  color: #fff;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .row-item {\n  transition: all 0.3s;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-info {\n  display: flex;\n  width: 100%;\n  font-size: 13px;\n}\n.dv-scroll-ranking-board .ranking-info .rank {\n  width: 40px;\n  color: #1370fb;\n}\n.dv-scroll-ranking-board .ranking-info .info-name {\n  flex: 1;\n}\n.dv-scroll-ranking-board .ranking-column {\n  border-bottom: 2px solid rgba(19, 112, 251, 0.5);\n  margin-top: 5px;\n}\n.dv-scroll-ranking-board .ranking-column .inside-column {\n  position: relative;\n  height: 6px;\n  background-color: #1370fb;\n  margin-bottom: 2px;\n  border-radius: 1px;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-column .shine {\n  position: absolute;\n  left: 0%;\n  top: 2px;\n  height: 2px;\n  width: 50px;\n  transform: translateX(-100%);\n  background: radial-gradient(#28f8ff 5%, transparent 80%);\n  animation: shine 3s ease-in-out infinite alternate;\n}\n@keyframes shine {\n80% {\n    left: 0%;\n    transform: translateX(-100%);\n}\n100% {\n    left: 100%;\n    transform: translateX(0%);\n}\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,WAAW;EACX,gBAAgB;AAClB;AACA;EACE,oBAAoB;EACpB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;EACX,eAAe;AACjB;AACA;EACE,WAAW;EACX,cAAc;AAChB;AACA;EACE,OAAO;AACT;AACA;EACE,gDAAgD;EAChD,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,QAAQ;EACR,WAAW;EACX,WAAW;EACX,4BAA4B;EAC5B,wDAAwD;EACxD,kDAAkD;AACpD;AACA;AACE;IACE,QAAQ;IACR,4BAA4B;AAC9B;AACA;IACE,UAAU;IACV,yBAAyB;AAC3B;AACF","file":"main.vue","sourcesContent":[".dv-scroll-ranking-board {\n  width: 100%;\n  height: 100%;\n  color: #fff;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .row-item {\n  transition: all 0.3s;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-info {\n  display: flex;\n  width: 100%;\n  font-size: 13px;\n}\n.dv-scroll-ranking-board .ranking-info .rank {\n  width: 40px;\n  color: #1370fb;\n}\n.dv-scroll-ranking-board .ranking-info .info-name {\n  flex: 1;\n}\n.dv-scroll-ranking-board .ranking-column {\n  border-bottom: 2px solid rgba(19, 112, 251, 0.5);\n  margin-top: 5px;\n}\n.dv-scroll-ranking-board .ranking-column .inside-column {\n  position: relative;\n  height: 6px;\n  background-color: #1370fb;\n  margin-bottom: 2px;\n  border-radius: 1px;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-column .shine {\n  position: absolute;\n  left: 0%;\n  top: 2px;\n  height: 2px;\n  width: 50px;\n  transform: translateX(-100%);\n  background: radial-gradient(#28f8ff 5%, transparent 80%);\n  animation: shine 3s ease-in-out infinite alternate;\n}\n@keyframes shine {\n  80% {\n    left: 0%;\n    transform: translateX(-100%);\n  }\n  100% {\n    left: 100%;\n    transform: translateX(0%);\n  }\n}\n"]}, media: undefined });
+      inject("data-v-961344fc_0", { source: ".dv-scroll-ranking-board {\n  width: 100%;\n  height: 100%;\n  color: #fff;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .row-item {\n  transition: all 0.3s;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-info {\n  display: flex;\n  width: 100%;\n  font-size: 13px;\n}\n.dv-scroll-ranking-board .ranking-info .rank {\n  width: 40px;\n  color: #1370fb;\n}\n.dv-scroll-ranking-board .ranking-info .info-name {\n  flex: 1;\n}\n.dv-scroll-ranking-board .ranking-column {\n  border-bottom: 2px solid rgba(19, 112, 251, 0.5);\n  margin-top: 5px;\n}\n.dv-scroll-ranking-board .ranking-column .inside-column {\n  position: relative;\n  height: 6px;\n  background-color: #1370fb;\n  margin-bottom: 2px;\n  border-radius: 1px;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-column .shine {\n  position: absolute;\n  left: 0%;\n  top: 2px;\n  height: 2px;\n  width: 50px;\n  transform: translateX(-100%);\n  background: radial-gradient(#28f8ff 5%, transparent 80%);\n  animation: shine 3s ease-in-out infinite alternate;\n}\n@keyframes shine {\n80% {\n    left: 0%;\n    transform: translateX(-100%);\n}\n100% {\n    left: 100%;\n    transform: translateX(0%);\n}\n}\n", map: {"version":3,"sources":["main.vue"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,YAAY;EACZ,WAAW;EACX,gBAAgB;AAClB;AACA;EACE,oBAAoB;EACpB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,WAAW;EACX,eAAe;AACjB;AACA;EACE,WAAW;EACX,cAAc;AAChB;AACA;EACE,OAAO;AACT;AACA;EACE,gDAAgD;EAChD,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,kBAAkB;EAClB,QAAQ;EACR,QAAQ;EACR,WAAW;EACX,WAAW;EACX,4BAA4B;EAC5B,wDAAwD;EACxD,kDAAkD;AACpD;AACA;AACE;IACE,QAAQ;IACR,4BAA4B;AAC9B;AACA;IACE,UAAU;IACV,yBAAyB;AAC3B;AACF","file":"main.vue","sourcesContent":[".dv-scroll-ranking-board {\n  width: 100%;\n  height: 100%;\n  color: #fff;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .row-item {\n  transition: all 0.3s;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-info {\n  display: flex;\n  width: 100%;\n  font-size: 13px;\n}\n.dv-scroll-ranking-board .ranking-info .rank {\n  width: 40px;\n  color: #1370fb;\n}\n.dv-scroll-ranking-board .ranking-info .info-name {\n  flex: 1;\n}\n.dv-scroll-ranking-board .ranking-column {\n  border-bottom: 2px solid rgba(19, 112, 251, 0.5);\n  margin-top: 5px;\n}\n.dv-scroll-ranking-board .ranking-column .inside-column {\n  position: relative;\n  height: 6px;\n  background-color: #1370fb;\n  margin-bottom: 2px;\n  border-radius: 1px;\n  overflow: hidden;\n}\n.dv-scroll-ranking-board .ranking-column .shine {\n  position: absolute;\n  left: 0%;\n  top: 2px;\n  height: 2px;\n  width: 50px;\n  transform: translateX(-100%);\n  background: radial-gradient(#28f8ff 5%, transparent 80%);\n  animation: shine 3s ease-in-out infinite alternate;\n}\n@keyframes shine {\n  80% {\n    left: 0%;\n    transform: translateX(-100%);\n  }\n  100% {\n    left: 100%;\n    transform: translateX(0%);\n  }\n}\n"]}, media: undefined });
 
     };
     /* scoped */
@@ -24245,6 +24349,6 @@
     Vue.use(scrollRankingBoard);
   }
 
-  Vue.use(datav);
+  Vue__default['default'].use(datav);
 
 })));
